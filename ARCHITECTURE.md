@@ -9,7 +9,7 @@ Entscheidung getroffen: 02.08.2026 (Action Item #2 aus PROJEKTPLAN.md).
 | Frontend | **Next.js 14 (App Router) + TypeScript + Tailwind CSS** | Größtes Ökosystem für News-/Content-Seiten, ISR für schnelle News-Updates ohne Full-Rebuild, einfaches Vercel-Deployment, SSR für SEO |
 | Backend/CMS | **Strapi (Headless CMS) + PostgreSQL** | Fertiges Admin-Panel für Artikel/Kategorien/Editor's-Picks, REST- und GraphQL-API out-of-the-box, spart eigenen CRUD-Code für den MVP |
 | Datenbank | **PostgreSQL** (Produktion) / **SQLite** (lokale Entwicklung) | Postgres von Strapi nativ unterstützt, robust für relationale Artikel/Kategorie/Tag-Struktur; SQLite lokal, damit kein separater DB-Server für die Entwicklung nötig ist (`backend/.env` steuert `DATABASE_CLIENT`) |
-| Ingestion-Pipeline | **Standalone Node-Skripte** (`scripts/`), aufrufbar per Cron (Phase 2) → ggf. Python/Airflow (Phase 3+) | Umgesetzt als eigenständiges npm-Package statt Strapi-Plugin (siehe "Offene Punkte" unten für die Begründung); `scripts/verify-sources.mjs` prüft Feeds, `scripts/ingest.mjs` zieht Artikel und summarisiert optional per Claude API, beide mit begrenzter Nebenläufigkeit (`scripts/lib/http.mjs`) |
+| Ingestion-Pipeline | **Standalone Node-Skripte** (`scripts/`), aufrufbar per Cron (Phase 2) → ggf. Python/Airflow (Phase 3+) | Umgesetzt als eigenständiges npm-Package statt Strapi-Plugin (siehe "Offene Punkte" unten für die Begründung); `scripts/verify-sources.mjs` prüft Feeds, `scripts/ingest.mjs` zieht Artikel und summarisiert optional per Claude API, beide mit begrenzter Nebenläufigkeit (`scripts/lib/http.mjs`); `scripts/lib/topic-filter.mjs` verwirft vor der Summarisierung Werbe-Einträge sowie – bei Quellen mit `"requiresTopicFilter": true` – Meldungen ohne KI-Bezug |
 | KI-Integration | **Anthropic Claude API** (Summarization, Tagging) | Lt. Plan primäre Wahl; via Strapi Lifecycle-Hooks beim Artikel-Import angebunden |
 | Suche | **Postgres Full-Text-Search (MVP) → Vector Search (Phase 3)** | Kein Elasticsearch/Qdrant-Overhead für den MVP; erst bei Bedarf für semantische Suche nachziehen |
 | Hosting | **Vercel (Frontend) + Hetzner/EU-Cloud (Strapi + Postgres)** | EU-Datenresidenz für Compliance, Vercel für Frontend-Performance/CDN |
@@ -22,6 +22,10 @@ Entscheidung getroffen: 02.08.2026 (Action Item #2 aus PROJEKTPLAN.md).
 /backend     Strapi Instanz (Content-API, Admin-Panel)
 /scripts     Standalone Ingestion-/Wartungs-Skripte (eigenes npm-Package)
 /data        Statische Konfigurationsdaten (RSS-Quellen, Anbieter-Verzeichnis, Benchmarks)
+             sources.json ist die einzige Fassung: Der tsconfig-Alias "@/data/*"
+             fällt auf "../data/*" zurück, sodass Frontend und Ingestion-Skripte
+             dieselbe Datei lesen (eine frühere Kopie unter frontend/data/ war
+             unbemerkt veraltet).
 ```
 
 Kein gemeinsames Package-Management (kein Turborepo/Nx) im MVP – alle drei Teile haben

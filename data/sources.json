@@ -298,17 +298,22 @@
       "scopeNote": "Der themenspezifische heise-KI-Feed war nicht erreichbar; dies ist der allgemeine Heise-Feed. Ingestion muss auf KI-Keywords filtern.",
       "verified": true,
       "lastCheckedAt": "2026-08-09",
-      "domain": "general-news"
+      "domain": "general-news",
+      "requiresTopicFilter": true,
+      "displayName": "Heise Online"
     },
     {
-      "name": "Golem – KI",
+      "name": "Golem (allgemein, nach KI filtern)",
       "type": "de-quelle",
       "category": "breaking-news",
       "feedUrl": "https://rss.golem.de/rss.php?feed=RSS2.0",
       "refreshIntervalMinutes": 60,
       "verified": true,
       "lastCheckedAt": "2026-08-09",
-      "domain": "general-news"
+      "domain": "general-news",
+      "requiresTopicFilter": true,
+      "scopeNote": "Trotz des frueheren Namens \"Golem – KI\" zeigt feedUrl auf den ALLGEMEINEN Golem-Feed (rss.php?feed=RSS2.0), nicht auf den KI-Themenfeed. Der Feed lieferte entsprechend Magnetschwebebahn-, Flugtaxi- und Amazon-Anzeigen-Eintraege. Ingestion muss auf KI-Keywords filtern. Zu pruefen: Golem verwendet fuer Themenfeeds den Parameter tp= (z.B. rss.php?tp=dev&feed=RSS1.0); ein tp=ki-Feed waere die sauberere Quelle, war hier aber nicht verifizierbar.",
+      "displayName": "Golem.de"
     },
     {
       "name": "t3n (allgemein, nach KI filtern)",
@@ -319,7 +324,9 @@
       "scopeNote": "Der themenspezifische t3n-KI-Feed war nicht erreichbar; dies ist der allgemeine t3n-Feed. Ingestion muss auf KI-Keywords filtern.",
       "verified": true,
       "lastCheckedAt": "2026-08-09",
-      "domain": "general-news"
+      "domain": "general-news",
+      "requiresTopicFilter": true,
+      "displayName": "t3n"
     },
     {
       "name": "TechCrunch – Artificial Intelligence",
@@ -340,7 +347,9 @@
       "scopeNote": "Der themenspezifische Gründerszene-KI-Tag-Feed war nicht erreichbar; dies ist der allgemeine Feed. Ingestion muss auf KI-Keywords filtern.",
       "verified": true,
       "lastCheckedAt": "2026-08-09",
-      "domain": "business"
+      "domain": "business",
+      "requiresTopicFilter": true,
+      "displayName": "Gründerszene"
     },
     {
       "name": "EU Digital Strategy – News",

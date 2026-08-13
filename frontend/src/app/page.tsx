@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { categories } from "@/lib/categories";
 import { getBreakingArticles, getEditorsPicks, getLatestArticles } from "@/lib/articles";
+import { verifiedSourceCount } from "@/lib/sources";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Sidebar } from "@/components/Sidebar";
 import { LiveIndicator } from "@/components/LiveIndicator";
@@ -26,7 +27,7 @@ export default function Home() {
           </span>
         </div>
         <div className="hidden sm:flex items-center gap-6 text-xs text-muted">
-          <span>Verifizierte RSS-Quellen: <strong className="text-foreground">24 Quellen</strong></span>
+          <span>Verifizierte RSS-Quellen: <strong className="text-foreground">{verifiedSourceCount} Quellen</strong></span>
           <span>Transparenz-Score: <strong className="text-emerald-500">100% DSGVO-Konform</strong></span>
         </div>
       </div>

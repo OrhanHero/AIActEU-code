@@ -22,6 +22,7 @@ import { fileURLToPath } from "node:url";
 import Parser from "rss-parser";
 import { loadSources } from "./lib/sources.mjs";
 import { fetchWithTimeout, mapWithConcurrency, USER_AGENT } from "./lib/http.mjs";
+import { passesTopicFilter } from "./lib/topic-filter.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outputDir = path.join(__dirname, "output");
@@ -80,11 +81,15 @@ async function summarizeWithClaude(title, rawText) {
   return data.content?.[0]?.text?.trim() ?? null;
 }
 
+function rawTextOf(item) {
+  return item.contentSnippet || item.content || item.summary || "";
+}
+
 async function ingestItem(item, source) {
   const title = item.title?.trim();
   if (!title) return null;
 
-  const rawText = item.contentSnippet || item.content || item.summary || "";
+  const rawText = rawTextOf(item);
   let summary = rawText.slice(0, 280);
   let aiGenerated = false;
 
@@ -103,7 +108,11 @@ async function ingestItem(item, source) {
     summary: summary || "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
     categorySlug: source.category,
     tags: [],
-    sourceName: source.name,
+    // source.name ist der interne Bezeichner aus data/sources.json und enthaelt
+    // bei einigen Quellen redaktionelle Zusaetze ("... (allgemein, nach KI
+    // filtern)"). Dieses Feld wird im Frontend als "Quelle: ..." direkt
+    // angezeigt, deshalb hat displayName Vorrang, wo es gepflegt ist.
+    sourceName: source.displayName || source.name,
     sourceUrl: item.link || source.feedUrl,
     publishedAt: item.isoDate ? item.isoDate.slice(0, 10) : new Date().toISOString().slice(0, 10),
     aiGenerated,
@@ -123,7 +132,21 @@ async function ingestItem(item, source) {
 
 async function ingestSource(source) {
   const feed = await parser.parseURL(source.feedUrl);
-  const items = feed.items.slice(0, 10);
+
+  // Bewusst VOR der Zusammenfassung gefiltert: die Entscheidung braucht nur den
+  // Rohtext des Feeds, und so wird fuer verworfene Eintraege gar nicht erst die
+  // Claude-API aufgerufen. Erst danach wird auf 10 Eintraege gekuerzt, sonst
+  // wuerde ein allgemeiner Feed mit 10 themenfremden Meldungen an der Spitze
+  // gar keine KI-Artikel mehr liefern.
+  const relevant = feed.items.filter((item) =>
+    passesTopicFilter({ title: item.title, summary: rawTextOf(item) }, source)
+  );
+  const skipped = feed.items.length - relevant.length;
+  if (skipped > 0) {
+    console.log(`  ${source.name}: ${skipped} Eintraege ohne KI-Bezug/Werbung uebersprungen`);
+  }
+
+  const items = relevant.slice(0, 10);
   const articles = await mapWithConcurrency(items, ITEM_CONCURRENCY, (item) => ingestItem(item, source));
   return articles.filter(Boolean);
 }

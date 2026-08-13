@@ -24,6 +24,27 @@ export type Article = {
 // plus die redaktionell kuratierten Hauptstories aus data/featured.json
 export const articles: Article[] = [
   {
+    "slug": "eu-ai-act-durchsetzung-transparenzpflichten-artikel-50-gestartet",
+    "title": "EU AI Act: Durchsetzung gestartet – Transparenzpflichten nach Artikel 50 gelten jetzt",
+    "summary": "Seit dem 2. August 2026 setzen das AI Office der EU-Kommission und die nationalen Aufsichtsbehörden die KI-Verordnung durch. Damit gelten die Transparenzpflichten aus Artikel 50 verbindlich: Chatbots und andere interaktive KI-Systeme müssen Nutzerinnen und Nutzer darauf hinweisen, dass sie mit einer Maschine sprechen, und KI-generierte oder -veränderte Inhalte – einschließlich Deepfakes – müssen als solche gekennzeichnet werden. Für bereits im Markt befindliche Systeme läuft eine Übergangsfrist bis zum 2. Dezember 2026.",
+    "categorySlug": "policy",
+    "tags": [
+      "EU AI Act",
+      "Policy",
+      "Compliance"
+    ],
+    "sourceName": "Europäische Kommission",
+    "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/de/ip_26_1714",
+    "studyUrl": "https://www.heise.de/ratgeber/KI-Kennzeichnungspflicht-Was-die-EU-ab-August-2026-verlangt-11340625.html",
+    "studyLabel": "Einordnung: KI-Kennzeichnungspflicht – Was die EU ab August 2026 verlangt (heise online)",
+    "publishedAt": "2026-08-02",
+    "aiGenerated": true,
+    "humanReviewed": false,
+    "editorsNote": "Kernthema dieser Seite: Artikel 50 ist genau die Norm, auf der die Kennzeichnung hier auf AIActEU beruht. Verstoesse gegen die Transparenzpflichten koennen mit bis zu 15 Mio. Euro oder 3 Prozent des weltweiten Jahresumsatzes geahndet werden, bei verbotenen KI-Praktiken sind bis zu 35 Mio. Euro oder 7 Prozent vorgesehen - jeweils der hoehere Betrag. HINWEIS REDAKTION: Policy ist laut EDITORIAL_POLICY.md Abschnitt 2 eine kritische Kategorie (Stufe 4) und muss vor der Veroeffentlichung menschlich geprueft und freigegeben werden; bis dahin bleibt humanReviewed auf false.",
+    "breaking": true,
+    "editorsPick": true
+  },
+  {
     "slug": "verschluesselter-ki-denkprozess-gehackt-schwache-modelle-verraten-geheimnisse",
     "title": "Verschlüsselter KI-Denkprozess gehackt: Schwache Modelle verraten Geheimnisse",
     "summary": "Ein Forschungsteam von MATS, Max-Planck-Institut, ELLIS-Institut Tübingen, Universität Tübingen und Snyk hat eine Architektur-Schwachstelle bei GPT-5, Claude und Gemini offengelegt: Die verschlüsselten Reasoning-Blöcke, mit denen Anbieter den Denkprozess ihrer Modelle vor Kunden verbergen, sind innerhalb einer Anbieter-Familie über Sessions, Nutzer und Modelle hinweg beliebig austauschbar. Wird der Block eines Flaggschiff-Modells an ein schwächeres, geringer abgesichertes Modell desselben Anbieters geschickt, entschlüsselt dieses den fremden Denkprozess und gibt ihn wörtlich im Klartext aus – das stärkere Modell muss dafür nie selbst angegriffen werden.",
@@ -46,67 +67,6 @@ export const articles: Article[] = [
     "editorsPick": true
   },
   {
-    "slug": "top-10-bester-akku-rasenmaher-im-test-stihl-vor-einhell-gardena-makita",
-    "title": "Top 10: Bester Akku-Rasenmäher im Test – Stihl vor Einhell, Gardena & Makita",
-    "summary": "Leiser, flexibler, komfortabler: Akku-Rasenmäher haben klare Vorteile gegenüber Benzin- und Kabelmodellen. Wir zeigen die besten Modelle.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/bestenlisten/testsieger/top-10-bester-akku-rasenmaeher-im-test-stihl-vor-einhell-gardena-und-makita/ft2r6hp?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "breaking": true
-  },
-  {
-    "slug": "kosteneffizienz-unter-druck-apple-passt-lagerhaltung-an",
-    "title": "Kosteneffizienz unter Druck: Apple passt Lagerhaltung an",
-    "summary": "Um sich gegen steigende Rohstoffpreise abzusichern, soll Apple seine Lagerhaltung für OLED-Displays verlängert haben. Analysten erwarten Preiserhöhungen.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Apple-aendert-Lagerstrategie-OLED-Displays-werden-laenger-vorgehalten-11411977.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "breaking": true,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
-  },
-  {
-    "slug": "chinas-eigententwicklung-comac-c919-fliegt-erstmals-international",
-    "title": "Chinas Eigententwicklung Comac C919 fliegt erstmals international",
-    "summary": "Die Comac C919 ist das erste vollständig in China entwickelte Passagierflugzeug. Air China setzt die Maschine erstmals auch international ein.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Air-China-eroeffnet-erste-internationale-Strecke-mit-der-C919-11411861.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "breaking": true
-  },
-  {
-    "slug": "geheimdienst-reform-mehr-befugnisse-fur-bnd-und-verfassungsschutz",
-    "title": "Geheimdienst-Reform: Mehr Befugnisse für BND und Verfassungsschutz",
-    "summary": "BND und Verfassungsschutz sollen künftig mehr Befugnisse erhalten, um aktiv Gefahren abzuwehren. Es ist ein Bruch mit Grundsatzprinzipien.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Geheimdienst-Reform-Mehr-Befugnisse-fuer-BND-und-Verfassungsschutz-11412017.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
     "slug": "heise-laysie-ki-songs-mit-raspberry-pi-generieren",
     "title": "heise+ | LAYSIE: KI-Songs mit Raspberry Pi generieren",
     "summary": "Kein Instrument, keine Übung – kein Problem. LAYSIE generiert per KI individuelle Songs aus gesprochenen Ideen und spielt sie über Bluetooth ab.",
@@ -114,71 +74,12 @@ export const articles: Article[] = [
     "tags": [
       "KI News"
     ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceName": "Heise Online",
     "sourceUrl": "https://www.heise.de/ratgeber/LAYSIE-KI-Songs-mit-Raspberry-Pi-generieren-11368294.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "der-security-coprozessor-in-vielen-cpus-ist-unsicher",
-    "title": "Der Security-Coprozessor in vielen CPUs ist unsicher",
-    "summary": "Das Trusted Platform Module ist das wichtigste Glied in der Vertrauenskette von PCs. Ausgerechnet dieses TPM ist angreifbar.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "AI Safety"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Der-Security-Ko-Prozessor-in-vielen-CPUs-ist-unsicher-11411837.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
     "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
-  },
-  {
-    "slug": "meaco-sefte-10-pro-im-test-guter-flexibler-standventilator-mit-akku-und-app",
-    "title": "Meaco Sefte 10 Pro im Test: Guter & flexibler Standventilator mit Akku und App",
-    "summary": "Der Meaco Sefte Pro 10 verbindet drei Bauhöhen mit Akku und App. Der Ventilator liefert kräftigen Wind, ist aber in den hohen Stufen recht laut.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/bestenlisten/testbericht/meaco-sefte-10-pro-im-test-guter-und-flexibler-standventilator-mit-akku-und-app/h2tjsm6?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "pixel-watch-5-als-fitnesscoach-und-lebensretter",
-    "title": "Pixel Watch 5 als Fitnesscoach und Lebensretter",
-    "summary": "Die fünfte Generation der Pixel Watch bietet umfangreiches Gesundheits- sowie Fitnesstracking und wählt in Notfällen die 112.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Pixel-Watch-5-als-Fitnesscoach-und-Lebensretter-11411597.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "pixel-11-11-pro-fold-google-zeigt-smartphones-und-eine-uberfallige-neuheit",
-    "title": "Pixel 11, 11 Pro & Fold: Google zeigt Smartphones und eine überfällige Neuheit",
-    "summary": "Google stellt in New York sein neues Hardware-Line-Up vor. Dazu zählen neue Pixel-Smartphones, eine neue Smartwatch und ein länger erwarteter BT-Tracker.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Google DeepMind",
-      "EU AI Act",
-      "Hardware"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Pixel-11-11-Pro-Fold-Google-zeigt-Smartphones-und-eine-ueberfaellige-Neuheit-11411543.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
+    "breaking": true
   },
   {
     "slug": "from-assistance-to-execution-how-enterprises-put-ai-to-work",
@@ -193,7 +94,10 @@ export const articles: Article[] = [
     "sourceUrl": "https://openai.com/index/how-enterprises-put-ai-to-work",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
-    "humanReviewed": false
+    "humanReviewed": false,
+    "breaking": true,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
     "slug": "putting-sign-language-ai-into-users-hands",
@@ -235,9 +139,7 @@ export const articles: Article[] = [
     "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+    "humanReviewed": false
   },
   {
     "slug": "part-2-amazon-bedrock-cost-attribution-with-amazon-athena-and-cudos",
@@ -251,7 +153,9 @@ export const articles: Article[] = [
     "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/part-2-amazon-bedrock-cost-attribution-with-amazon-athena-and-cudos/",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
-    "humanReviewed": false
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
     "slug": "how-oneadvanced-deployed-over-50-ai-agents-on-uk-sovereign-aws",
@@ -351,35 +255,9 @@ export const articles: Article[] = [
     "sourceUrl": "https://www.langchain.com/blog/what-is-an-agent",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "flugtaxis-hochenergetische-flugzeugbatterie-von-catl-geht-in-serie",
-    "title": "Flugtaxis: Hochenergetische Flugzeugbatterie von CATL geht in Serie",
-    "summary": "Für den Antrieb von Flugtaxis hat CATL einen Akku mit besonders hoher Energiedichte entwickelt. Einen ersten Kunden gibt es schon. (Lufttaxi, Luftfahrt)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/flugtaxis-hochenergetische-flugzeugbatterie-von-catl-geht-in-serie-2608-211876.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "telefon-box-telekom-ersetzt-analoge-festnetznutzung-durch-lte",
-    "title": "Telefon-Box: Telekom ersetzt analoge Festnetznutzung durch LTE",
-    "summary": "Umstellung für alle, die rein analog telefonieren: Herkömmliche analoge MSAN-POTS-Anschlüsse, die bereitgestellt wurden, sollen laut Telekom weg. (Festnetz, DSL)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/telefon-box-telekom-ersetzt-analoge-festnetznutzung-durch-lte-2608-211875.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
     "slug": "neue-finanzierungsidee-nvidia-macht-rechenzentren-zum-finanzprodukt",
@@ -390,52 +268,8 @@ export const articles: Article[] = [
       "NVIDIA",
       "EU AI Act"
     ],
-    "sourceName": "Golem – KI",
+    "sourceName": "Golem.de",
     "sourceUrl": "https://www.golem.de/news/neue-finanzierungsidee-nvidia-macht-rechenzentren-zum-finanzprodukt-2608-211874.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "anzeige-praziser-3d-drucker-fur-nur-298-99-euro-bei-amazon",
-    "title": "Anzeige: Präziser 3D-Drucker für nur 298,99 Euro bei Amazon",
-    "summary": "Amazon hat einen mehrfarbigen 3D-Drucker von Anycubic im Angebot, der sich durch hohe Präzision und geringen Materialverbrauch auszeichnet. (Technik/Hardware, 3D-Drucker)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act",
-      "Hardware"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/anzeige-praeziser-3d-drucker-fuer-nur-298-99-euro-bei-amazon-2608-211867.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "testversuch-chinas-magnetschwebezug-fahrt-800-km-h-in-5-3-sekunden",
-    "title": "Testversuch: Chinas Magnetschwebezug fährt 800 km/h in 5,3 Sekunden",
-    "summary": "Unter Testbedingungen und auf gerader Strecke fährt der experimentelle Maglev-Zug fast so schnell wie ein Passagierflugzeug fliegt. (China, Transrapid)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/testversuch-chinas-magnetschwebezug-faehrt-800-km-h-in-5-3-sekunden-2608-211869.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "anzeige-hei-luftfritteusen-von-cosori-und-philips-bei-amazon-zu-angebotspreisen-",
-    "title": "Anzeige: Heißluftfritteusen von Cosori und Philips bei Amazon zu Angebotspreisen sichern",
-    "summary": "Für eine schnelle und gesunde Essenszubereitung bietet sich eine Heißluftfritteuse an. Modelle von Cosori und Philips sind bei Amazon reduziert. (Technik/Hardware, Amazon)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act",
-      "Hardware"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/anzeige-heissluftfritteusen-von-cosori-und-philips-bei-amazon-zu-angebotspreisen-sichern-2608-211870.html",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
     "humanReviewed": false
@@ -448,107 +282,8 @@ export const articles: Article[] = [
     "tags": [
       "EU AI Act"
     ],
-    "sourceName": "Golem – KI",
+    "sourceName": "Golem.de",
     "sourceUrl": "https://www.golem.de/news/arbeitsmarktprognose-deutsche-firmen-erwarten-sinkende-loehne-wegen-ki-2608-211868.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "google-pixel-watch-5-hat-bessere-akkulaufzeit-und-genaueres-gps",
-    "title": "Google: Pixel Watch 5 hat bessere Akkulaufzeit und genaueres GPS",
-    "summary": "Google verbessert bei der Pixel Watch 5 unter anderem Akkulaufzeit, GPS und einige Gesundheitsfunktionen. (Pixel Watch, Google)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Google DeepMind"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/google-pixel-watch-5-mit-mehr-akku-und-genauerem-gps-2608-211866.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "anzeige-4-in-1-ugreen-nexode-100w-ladegerat-zum-aktionspreis-fur-rund-30-euro-be",
-    "title": "Anzeige: 4-in-1-Ugreen-Nexode-100W-Ladegerät zum Aktionspreis für rund 30 Euro bei Amazon",
-    "summary": "Das Ugreen Nexode 100W Ladegerät lädt bis zu vier Geräte gleichzeitig per GaN-Technik und ist bei Amazon aktuell günstiger erhältlich. (Technik/Hardware, Notebook)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act",
-      "Hardware"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/anzeige-4-in-1-ugreen-nexode-100w-ladegeraet-zum-aktionspreis-fuer-rund-30-euro-bei-amazon-2608-211865.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "anzeige-gro-er-17-zoll-laptop-bei-amazon-im-angebot",
-    "title": "Anzeige: Großer 17-Zoll-Laptop bei Amazon im Angebot",
-    "summary": "Bei Amazon gibt es derzeit einen interessanten HP-Laptop im Angebot. Er ist fast zum Tiefstpreis erhältlich. (Notebook, Computer)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/anzeige-grosser-17-zoll-laptop-bei-amazon-im-angebot-2608-211864.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "mcdonald-s-app-algorithmus-wie-das-fast-food-unternehmen-verzehrdaten-auswertet",
-    "title": "McDonald’s App-Algorithmus: Wie das Fast-Food-Unternehmen Verzehrdaten auswertet",
-    "summary": "Wer regelmäßig Punkte in der App des weltweit größten Fast-Food-Unternehmens sammelt, gibt mehr preis als nur eine E-Mail-Adresse. Im Hintergrund arbeiten komplexe Systeme, die weitreichende Rückschlüsse über den Alltag der Burger-Konsumenten ziehen können.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/mcdonalds-app-algorithmus-datenanalyse-1757847/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "vorbild-schneckenschleim-forscher-entschlusseln-faszinierendes-naturmaterial",
-    "title": "Vorbild Schneckenschleim: Forscher entschlüsseln faszinierendes Naturmaterial",
-    "summary": "Forschende haben Schneckenschleim untersucht und ihn für ziemlich smart befunden. Die Erkenntnisse sollen auch bei der Entwicklung neuer Biomaterialien helfen.weiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/vorbild-schneckenschleim-forscher-entschluesseln-faszinierendes-naturmaterial-1757729/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "uber-5-billionen-pixel-forscher-veroffentlichen-die-bislang-gro-te-karte-des-uni",
-    "title": "Über 5 Billionen Pixel: Forscher veröffentlichen die bislang größte Karte des Universums",
-    "summary": "Fast vier Milliarden kosmische Objekte in einer Auflösung von über fünf Billionen Pixel: Ein Wissenschaftsteam hat die bisher größte zweidimensionale Karte des Universums veröffentlicht. Was die zeigt – und was nicht.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/5-billionen-pixel-groesste-karte-universum-1757675/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "windows-11-so-starten-deine-apps-jetzt-schneller",
-    "title": "Windows 11: So starten deine Apps jetzt schneller",
-    "summary": "Microsoft verpasst Windows 11 einen Geschwindigkeits-Boots. Ein neues Feature sorgt dafür, dass künftig zahlreiche Apps schneller starten. Wie das geht und wann du von der Neuerung profitierst.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/windows-11-apps-schneller-starten-1757821/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
     "humanReviewed": false
@@ -561,22 +296,8 @@ export const articles: Article[] = [
     "tags": [
       "OpenAI"
     ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceName": "t3n",
     "sourceUrl": "https://t3n.de/news/openai-friction-email-buerokratie-1757818/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "windows-warum-alte-ui-elemente-noch-jahrelang-im-betriebssystem-verbleiben",
-    "title": "Windows: Warum alte UI-Elemente noch jahrelang im Betriebssystem verbleiben",
-    "summary": "Wer Windows 11 nutzt, wird heute noch auf Elemente stoßen, die ihren alten Look und Funktionen von vorherigen Betriebssystemversionen beibehalten haben. Warum das so ist, hat Microsoft schon vor 23 Jahren ausführlich beleuchtet.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/windows-alte-ui-elemente-jahrelang-im-betriebssystem-1757757/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
     "humanReviewed": false
@@ -591,7 +312,7 @@ export const articles: Article[] = [
       "Anthropic",
       "Agentic AI"
     ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceName": "t3n",
     "sourceUrl": "https://t3n.de/news/grok-bot-vorgestellt-das-kann-der-neue-ki-agent-von-elon-musks-ki-firma-1757749/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
@@ -606,7 +327,7 @@ export const articles: Article[] = [
       "Google DeepMind",
       "EU AI Act"
     ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceName": "t3n",
     "sourceUrl": "https://t3n.de/news/wissenschaft-am-ende-ex-google-chef-eric-schmidt-erklaert-wie-forscher-mit-ki-wirklich-weiterkommen-1757410/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
@@ -620,7 +341,7 @@ export const articles: Article[] = [
     "tags": [
       "EU AI Act"
     ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceName": "t3n",
     "sourceUrl": "https://t3n.de/news/ki-tool-3d-welten-einzeiliger-prompt-1757702/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
@@ -636,7 +357,7 @@ export const articles: Article[] = [
       "Agentic AI",
       "EU AI Act"
     ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceName": "t3n",
     "sourceUrl": "https://t3n.de/news/google-ads-und-analytics-bekommen-neue-ki-funktionen-was-sich-jetzt-aendert-1757759/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
@@ -794,7 +515,7 @@ export const articles: Article[] = [
     "tags": [
       "Agentic AI"
     ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
+    "sourceName": "Gründerszene",
     "sourceUrl": "https://www.businessinsider.de/gruenderszene/gruenderszene-sucht-die-super-gruender/fellows/ich-arbeite-120-stunden-pro-woche-und-treffe-keine-freunde/",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
@@ -808,7 +529,7 @@ export const articles: Article[] = [
     "tags": [
       "KI News"
     ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
+    "sourceName": "Gründerszene",
     "sourceUrl": "https://www.businessinsider.de/gruenderszene/wie-ein-linkedin-post-mir-1000-app-anmeldungen-brachte/",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
@@ -824,7 +545,7 @@ export const articles: Article[] = [
       "RAG",
       "Agentic AI"
     ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
+    "sourceName": "Gründerszene",
     "sourceUrl": "https://www.businessinsider.de/gruenderszene/business/will-google-diesen-15-milliarden-dollar-deal/",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
@@ -838,7 +559,7 @@ export const articles: Article[] = [
     "tags": [
       "OpenAI"
     ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
+    "sourceName": "Gründerszene",
     "sourceUrl": "https://www.businessinsider.de/gruenderszene/news/mit-ki-bewerben-dieses-wort-faellt-sofort-auf/",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
@@ -852,36 +573,8 @@ export const articles: Article[] = [
     "tags": [
       "Meta AI"
     ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
+    "sourceName": "Gründerszene",
     "sourceUrl": "https://www.businessinsider.de/gruenderszene/ganz-schoen-meta-ich-habe-zuckerbergs-6500-woerter-ki-manifest-gelesen/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "wie-gewinnt-man-die-ersten-kunden-diese-grunder-setzen-auf-einen-ungewohnlichen-",
-    "title": "Wie gewinnt man die ersten Kunden? Diese Gründer setzen auf einen ungewöhnlichen (Party)-Trick",
-    "summary": "Garry Lazovskis und Minh Vu Ngo haben ihr Produkt fertiggestellt – und wollen es jetzt mit einer Party bekannt machen.",
-    "categorySlug": "business",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/wie-gewinnt-man-die-ersten-kunden-gruender-setzen-auf-einen-party-trick/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "nur-einer-von-300-schafft-es-so-lauft-der-auswahlprozess-fur-ein-praktikum-bei-c",
-    "title": "Nur einer von 300 schafft es: So läuft der Auswahlprozess für ein Praktikum bei Cherry Ventures",
-    "summary": "Cherry Ventures-Principal Victor Huerbe erklärt, worauf der VC bei Bewerbern achtet und wie der Auswahlprozess abläuft.",
-    "categorySlug": "business",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/karriere-startup/nur-einer-von-300-schafft-es-so-laeuft-der-auswahlprozess-fuer-ein-praktikum-bei-cherry-ventures/",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
     "humanReviewed": false
@@ -894,7 +587,7 @@ export const articles: Article[] = [
     "tags": [
       "EU AI Act"
     ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
+    "sourceName": "Gründerszene",
     "sourceUrl": "https://www.businessinsider.de/gruenderszene/ki-startups-diese-7-haben-einen-ueberraschenden-investor/",
     "publishedAt": "2026-08-12",
     "aiGenerated": false,
