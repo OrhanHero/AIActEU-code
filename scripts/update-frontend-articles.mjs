@@ -204,6 +204,18 @@ export type Article = {
   // gesetzt ueber data/featured.json.
   studyUrl?: string;
   studyLabel?: string;
+  // Weiterfuehrendes Quellen-Dossier einer kuratierten Hauptstory. Die Gruppe
+  // steuert Reihenfolge und Ueberschrift der Darstellung in der Hero-Sektion.
+  relatedLinks?: RelatedLink[];
+};
+
+export type RelatedLinkGroup = "berichterstattung" | "community" | "hintergrund";
+
+export type RelatedLink = {
+  group: RelatedLinkGroup;
+  sourceName: string;
+  label: string;
+  url: string;
 };
 
 // Automatisch aktualisierte KI-News Artikel aus den verifizierten RSS-Quellen

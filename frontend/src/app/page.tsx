@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { categories } from "@/lib/categories";
-import { getBreakingArticles, getEditorsPicks, getLatestArticles } from "@/lib/articles";
+import { getBreakingArticles, getEditorsPicks, getLatestArticles, type RelatedLinkGroup } from "@/lib/articles";
 import { verifiedSourceCount } from "@/lib/sources";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Sidebar } from "@/components/Sidebar";
@@ -9,6 +9,17 @@ import { LiveIndicator } from "@/components/LiveIndicator";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { CategoryIcon } from "@/components/CategoryIcon";
 import { AiGeneratedLabel } from "@/components/AiGeneratedLabel";
+
+// Reihenfolge des Quellen-Dossiers unter der Hauptstory: erst die Bericht-
+// erstattung (chronologisch in der Reihenfolge aus data/featured.json), dann
+// die Reaktionen aus der Community, zuletzt der einordnende Hintergrund.
+const relatedLinkGroupOrder: RelatedLinkGroup[] = ["berichterstattung", "community", "hintergrund"];
+
+const relatedLinkGroupLabels: Record<RelatedLinkGroup, string> = {
+  berichterstattung: "Berichterstattung",
+  community: "Reaktionen aus der Community",
+  hintergrund: "Hintergrund & Einordnung",
+};
 
 export default function Home() {
   const breaking = getBreakingArticles();
@@ -122,6 +133,43 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {/* Quellen-Dossier zur Hauptstory */}
+              {leadArticle?.relatedLinks && leadArticle.relatedLinks.length > 0 && (
+                <div className="mt-6 border-t border-border/60 pt-4">
+                  <h2 className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-wider text-accent">
+                    Dossier zur Hauptstory
+                  </h2>
+                  <div className="flex flex-col gap-4">
+                    {relatedLinkGroupOrder.map((group) => {
+                      const links = leadArticle.relatedLinks!.filter((l) => l.group === group);
+                      if (links.length === 0) return null;
+                      return (
+                        <div key={group}>
+                          <h3 className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted">
+                            {relatedLinkGroupLabels[group]}
+                          </h3>
+                          <ul className="flex flex-col gap-1.5">
+                            {links.map((link) => (
+                              <li key={link.url} className="flex flex-wrap items-baseline gap-x-2 text-sm">
+                                <span className="font-mono text-[11px] text-primary">{link.sourceName}</span>
+                                <a
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-muted underline-offset-2 transition-colors hover:text-foreground hover:underline"
+                                >
+                                  {link.label} ↗
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
 
               {/* Quick Metrics Inside Hero */}
               <div className="mt-6 grid grid-cols-2 gap-4 border-t border-border/60 pt-4 sm:grid-cols-4">
