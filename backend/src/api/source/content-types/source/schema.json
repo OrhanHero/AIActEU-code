@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sources",
+  "info": {
+    "singularName": "source",
+    "pluralName": "sources",
+    "displayName": "Source",
+    "description": "RSS/API-Quellen für die Ingestion-Pipeline, siehe data/sources.json"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "feedUrl": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["lab-blog", "newsletter", "paper", "dev-blog", "de-quelle", "startup", "policy"],
+      "required": true
+    },
+    "categorySlug": {
+      "type": "string",
+      "required": true
+    },
+    "refreshIntervalMinutes": {
+      "type": "integer",
+      "default": 60
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "lastCheckedAt": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+export const metadata = {
+  title: "Private RAG: Eigene Dokumente durchsuchbar machen",
+  description:
+    "Mit Ollama, Qdrant und AnythingLLM eine Dokumentensuche aufbauen, ohne dass Daten die eigene Infrastruktur verlassen.",
+};
+
+Retrieval-Augmented Generation (RAG) beantwortet Fragen auf Basis eigener Dokumente statt
+nur aus dem Trainingswissen des Modells. Für sensible Daten (Verträge, interne Notizen,
+Patientenunterlagen) ist eine vollständig lokale Pipeline oft die einzig vertretbare Option –
+siehe auch die Datenschutz-Hinweise in [COMPLIANCE.md](/compliance).
+
+## Architektur im Überblick
+
+```
+Dokumente (PDF/TXT) → Chunking → Embedding-Modell → Qdrant (Vector-DB)
+                                                          │
+Nutzerfrage → Embedding → Ähnlichkeitssuche in Qdrant → Kontext → Ollama-LLM → Antwort
+```
+
+Alle vier Komponenten – Dokumente, Embeddings, Vector-DB und LLM – laufen dabei auf eigener
+Hardware.
+
+## Qdrant lokal starten
+
+```bash
+docker run -p 6333:6333 -v $(pwd)/qdrant_storage:/qdrant/storage qdrant/qdrant
+```
+
+Die Vector-Datenbank ist danach unter `localhost:6333` erreichbar (Dashboard unter
+`localhost:6333/dashboard`).
+
+## Variante A: AnythingLLM (schnellster Einstieg)
+
+AnythingLLM bündelt Dokumenten-Import, Chunking, Embedding und die Anbindung an Ollama +
+Qdrant in einer Oberfläche, ohne dass eigener Code nötig ist:
+
+1. AnythingLLM Desktop installieren oder per Docker starten
+2. Unter "LLM Provider" Ollama als Backend auswählen
+3. Unter "Vector Database" Qdrant mit `http://localhost:6333` verbinden
+4. Workspace anlegen, PDFs per Drag & Drop hochladen
+5. Fragen stellen – die Antwort zitiert automatisch die Quell-Chunks
+
+## Variante B: Dify (mehr Kontrolle über die Pipeline)
+
+Dify eignet sich, sobald mehrere Wissensbasen oder ein Team mit unterschiedlichen
+Berechtigungen benötigt werden:
+
+```bash
+git clone https://github.com/langgenius/dify.git
+cd dify/docker
+cp .env.example .env
+docker compose up -d
+```
+
+In der Web-Oberfläche (`localhost/install`) wird bei der Ersteinrichtung Qdrant als
+Vector-Store und ein Ollama-Modell als LLM konfiguriert. Dify erlaubt zusätzlich, den
+Chunking-Algorithmus, die Retrieval-Strategie (Top-K, Hybrid-Search) und Prompt-Templates
+granular anzupassen.
+
+## Qualität der Antworten prüfen
+
+RAG-Systeme liefern nur so gute Antworten wie die Retrieval-Qualität. Häufige Stellschrauben:
+
+- **Chunk-Größe**: 500–1000 Zeichen mit Überlappung ist ein solider Startwert
+- **Embedding-Modell**: mehrsprachige Modelle (z. B. `nomic-embed-text` über Ollama) für
+  deutsche Dokumente bevorzugen
+- **Top-K**: bei kurzen Antworten 3–5 Chunks, bei komplexen Fragen bis zu 10
+
+## Nächste Schritte
+
+- [Ollama Mastery](/tutorials/ollama-mastery) – Grundlage für das LLM-Backend
+- Im [Verzeichnis](/verzeichnis#rag-vector-db) weitere RAG-Frameworks und Vector-Datenbanken

@@ -1,0 +1,68 @@
+export const metadata = {
+  title: "Continue.dev: Lokale LLMs direkt im Editor",
+  description: "VS Code und JetBrains an ein lokal laufendes Modell anbinden – ohne Cloud-API.",
+};
+
+Continue.dev ist eine Open-Source-Erweiterung für VS Code und JetBrains-IDEs, die
+Code-Vervollständigung und Chat direkt im Editor anbietet – wahlweise gegen Cloud-APIs oder
+gegen ein lokal laufendes Modell.
+
+## Installation
+
+- **VS Code**: Erweiterung "Continue" im Marketplace installieren
+- **JetBrains** (IntelliJ, PyCharm, WebStorm …): Plugin "Continue" im Plugin-Marktplatz installieren
+
+## Konfiguration für Ollama
+
+Nach der Installation öffnet sich `~/.continue/config.yaml`. Für ein lokales Setup:
+
+```yaml
+models:
+  - name: Lokales Chat-Modell
+    provider: ollama
+    model: qwen2.5-coder:7b
+    apiBase: http://localhost:11434
+
+  - name: Lokale Autovervollständigung
+    provider: ollama
+    model: qwen2.5-coder:1.5b-base
+    apiBase: http://localhost:11434
+    roles:
+      - autocomplete
+```
+
+Wichtig: Für Autovervollständigung eignen sich kleinere, speziell auf Code trainierte
+Fill-in-the-Middle-Modelle (z. B. `qwen2.5-coder` in der 1.5B-Variante) deutlich besser als
+große Chat-Modelle – sie antworten spürbar schneller.
+
+## Modelle vorab laden
+
+```bash
+ollama pull qwen2.5-coder:7b
+ollama pull qwen2.5-coder:1.5b-base
+```
+
+## Nutzung im Editor
+
+- **Chat**: Tastenkürzel öffnet eine Seitenleiste, Code-Abschnitte lassen sich per Klick als
+  Kontext hinzufügen
+- **Inline-Edit**: markierten Code auswählen und per Prompt umschreiben lassen, Diff wird
+  direkt im Editor angezeigt
+- **Autovervollständigung**: läuft automatisch im Hintergrund, ähnlich wie bei Cloud-basierten
+  Copilots
+
+## Warum lokal statt Cloud-API?
+
+- Quellcode verlässt nie die eigene Maschine – relevant bei Kundenprojekten mit NDA oder
+  regulierten Branchen
+- Keine laufenden API-Kosten pro Token
+- Funktioniert offline (z. B. im Zug oder in Umgebungen ohne Internetzugang)
+
+Nachteil: Lokale Modelle liegen bei komplexen Refactoring-Aufgaben aktuell noch hinter den
+größten Cloud-Modellen zurück – für viele alltägliche Aufgaben (Boilerplate, Tests,
+Dokumentation) reicht die Qualität aber gut aus.
+
+## Nächste Schritte
+
+- [Ollama Mastery](/tutorials/ollama-mastery) – falls Ollama noch nicht läuft
+- Im [Verzeichnis](/verzeichnis#dev-tools-infra) weitere Developer-Tools

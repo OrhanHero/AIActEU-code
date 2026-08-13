@@ -1,0 +1,717 @@
+[
+  {
+    "slug": "eu-ai-act-transparenzpflichten-2026",
+    "title": "EU AI Act: Transparenzpflichten für KI-Inhalte treten in Kraft",
+    "summary": "Ab August 2026 müssen Anbieter KI-generierte Inhalte klar kennzeichnen. Ein Überblick über die konkreten Pflichten für Medien- und Content-Plattformen.",
+    "categorySlug": "policy",
+    "tags": [
+      "EU AI Act",
+      "Regulierung",
+      "Transparenz"
+    ],
+    "sourceName": "EU Digital Strategy",
+    "sourceUrl": "https://digital-strategy.ec.europa.eu/",
+    "publishedAt": "2026-08-01",
+    "aiGenerated": true,
+    "humanReviewed": true,
+    "breaking": true
+  },
+  {
+    "slug": "claude-neues-agentic-release",
+    "title": "Anthropic stellt neue Agentic-Fähigkeiten für Claude vor",
+    "summary": "Verbesserte Tool-Use- und Planungsfähigkeiten sollen längere, autonome Workflows ermöglichen. Anthropic betont weiterhin Sicherheits- und Alignment-Fokus.",
+    "categorySlug": "technisch",
+    "tags": [
+      "LLM",
+      "Agentic AI",
+      "Anthropic"
+    ],
+    "sourceName": "Anthropic News",
+    "sourceUrl": "https://www.anthropic.com/news",
+    "publishedAt": "2026-07-31",
+    "aiGenerated": true,
+    "humanReviewed": false,
+    "breaking": true
+  },
+  {
+    "slug": "deutsches-ki-startup-serie-a",
+    "title": "Münchner KI-Startup sichert sich 18-Mio.-Euro-Series-A",
+    "summary": "Das Startup entwickelt Agentic-Workflows für die Fertigungsindustrie und will mit der Finanzierung die Expansion in weitere EU-Länder vorantreiben.",
+    "categorySlug": "business",
+    "tags": [
+      "Funding",
+      "Deutschland",
+      "Industrie 4.0"
+    ],
+    "sourceName": "Gründerszene",
+    "sourceUrl": "https://www.gruenderszene.de/",
+    "publishedAt": "2026-07-30",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "mechanistic-interpretability-survey",
+    "title": "Neue Survey systematisiert Fortschritte in Mechanistic Interpretability",
+    "summary": "Ein Paper von Forscher:innen mehrerer Universitäten ordnet aktuelle Circuit- und Feature-Analyse-Methoden ein und benennt offene Probleme.",
+    "categorySlug": "research",
+    "tags": [
+      "Interpretability",
+      "AI Safety",
+      "Paper"
+    ],
+    "sourceName": "arXiv cs.AI",
+    "sourceUrl": "https://arxiv.org/list/cs.AI/recent",
+    "publishedAt": "2026-07-29",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "rag-chunking-best-practices",
+    "title": "Chunking-Strategien für RAG-Systeme: Was 2026 wirklich funktioniert",
+    "summary": "Ein praxisnaher Vergleich semantischer, rekursiver und satzbasierter Chunking-Verfahren anhand aktueller Retrieval-Benchmarks.",
+    "categorySlug": "technisch",
+    "tags": [
+      "RAG",
+      "Vector Databases",
+      "Best Practices"
+    ],
+    "sourceName": "LangChain Blog",
+    "sourceUrl": "https://blog.langchain.dev/",
+    "publishedAt": "2026-07-28",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "bmi-ki-gesetz-referentenentwurf",
+    "title": "BMI legt Referentenentwurf zur nationalen KI-Aufsicht vor",
+    "summary": "Der Entwurf regelt Zuständigkeiten für die Marktüberwachung nach dem EU AI Act auf Bundesebene. Verbände fordern klarere Fristen.",
+    "categorySlug": "policy",
+    "tags": [
+      "Deutschland",
+      "Gesetzgebung",
+      "AI Act"
+    ],
+    "sourceName": "Bundesministerium des Innern",
+    "sourceUrl": "https://www.bmi.bund.de/",
+    "publishedAt": "2026-07-27",
+    "aiGenerated": true,
+    "humanReviewed": true
+  },
+  {
+    "slug": "lokale-llms-ollama-quantisierung",
+    "title": "Ollama verbessert Quantisierung für Edge-Deployment",
+    "summary": "Neue Quantisierungsverfahren senken den Speicherbedarf gängiger Modelle spürbar, bei nur geringem Qualitätsverlust auf Consumer-Hardware.",
+    "categorySlug": "technisch",
+    "tags": [
+      "Lokale LLMs",
+      "Edge AI",
+      "Quantization"
+    ],
+    "sourceName": "Ollama Blog",
+    "sourceUrl": "https://ollama.com/blog",
+    "publishedAt": "2026-07-26",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "huggingface-spaces-evaluation-suite",
+    "title": "Hugging Face erweitert Evaluation-Suite für Open-Source-Modelle",
+    "summary": "Neue Benchmarks decken Agentic-Tool-Use und mehrsprachige Aufgaben ab und sollen die Vergleichbarkeit von Leaderboard-Ergebnissen verbessern.",
+    "categorySlug": "tools",
+    "tags": [
+      "Benchmarks",
+      "Open Source",
+      "Hugging Face"
+    ],
+    "sourceName": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog",
+    "publishedAt": "2026-07-25",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "fraunhofer-ki-mittelstand-studie",
+    "title": "Fraunhofer-Studie: KI-Adoption im deutschen Mittelstand stagniert",
+    "summary": "Trotz hoher Erwartungen scheitert der produktive Einsatz oft an Datenqualität und fehlenden internen Kompetenzen, zeigt eine neue Befragung.",
+    "categorySlug": "business",
+    "tags": [
+      "Mittelstand",
+      "Studie",
+      "Adoption"
+    ],
+    "sourceName": "Fraunhofer-Institut",
+    "sourceUrl": "https://www.fraunhofer.de/",
+    "publishedAt": "2026-07-24",
+    "aiGenerated": true,
+    "humanReviewed": true,
+    "editorsPick": true,
+    "editorsNote": "Relevant für alle, die KI-Projekte im Mittelstand verantworten – zeigt konkrete Blocker jenseits der reinen Technologiefrage."
+  },
+  {
+    "slug": "prompt-engineering-kurs-empfehlung",
+    "title": "Kostenloser Kurs: Fortgeschrittenes Prompt Engineering für Agentic Systems",
+    "summary": "Eine neue, kostenlose Kursreihe behandelt Planungsstrategien, Tool-Use-Patterns und Evaluationsmethoden für agentenbasierte LLM-Anwendungen.",
+    "categorySlug": "education",
+    "tags": [
+      "Kurs",
+      "Prompt Engineering",
+      "Agentic AI"
+    ],
+    "sourceName": "DeepLearning.AI – The Batch",
+    "sourceUrl": "https://www.deeplearning.ai/the-batch/",
+    "publishedAt": "2026-07-23",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "vektor-db-vergleich-2026",
+    "title": "Vector-Database-Vergleich 2026: Latenz, Kosten, Skalierung",
+    "summary": "Ein aktualisierter Benchmark vergleicht Weaviate, Pinecone, Milvus und Chroma unter realistischen Produktions-Workloads.",
+    "categorySlug": "technisch",
+    "tags": [
+      "RAG",
+      "Vector Databases",
+      "Benchmark"
+    ],
+    "sourceName": "Weights & Biases Blog",
+    "sourceUrl": "https://wandb.ai/site/",
+    "publishedAt": "2026-07-22",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-jobs-nachfrage-europa",
+    "title": "Nachfrage nach ML-Engineering-Rollen in Europa weiter gestiegen",
+    "summary": "Aktuelle Arbeitsmarktdaten zeigen ein deutliches Plus bei Stellenausschreibungen für MLOps und Agentic-Engineering-Profile.",
+    "categorySlug": "business",
+    "tags": [
+      "Jobs",
+      "Karriere",
+      "Europa"
+    ],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/",
+    "publishedAt": "2026-07-21",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "deepfake-erkennung-eu-projekt",
+    "title": "EU-Förderprojekt entwickelt Open-Source-Tool zur Deepfake-Erkennung",
+    "summary": "Das Konsortium aus mehreren Universitäten will die Erkennungsrate bei Video-Deepfakes verbessern und die Ergebnisse offen zugänglich machen.",
+    "categorySlug": "policy",
+    "tags": [
+      "Deepfakes",
+      "Misinformation",
+      "EU-Förderung"
+    ],
+    "sourceName": "EU Digital Strategy",
+    "sourceUrl": "https://digital-strategy.ec.europa.eu/",
+    "publishedAt": "2026-07-20",
+    "aiGenerated": true,
+    "humanReviewed": true,
+    "editorsPick": true,
+    "editorsNote": "Gutes Beispiel für konstruktive Regulierung: Förderung statt reinem Verbot, mit offenem Tooling für die ganze Community."
+  },
+  {
+    "slug": "openai-neues-flaggschiffmodell",
+    "title": "OpenAI veröffentlicht neues Flaggschiff-Modell mit verbesserter Reasoning-Leistung",
+    "summary": "Das neue Modell soll bei komplexen mehrstufigen Aufgaben deutlich zulegen. OpenAI betont zugleich neue Sicherheitsauswertungen vor dem Rollout.",
+    "categorySlug": "technisch",
+    "tags": [
+      "LLM",
+      "OpenAI",
+      "Reasoning"
+    ],
+    "sourceName": "OpenAI News",
+    "sourceUrl": "https://openai.com/news/",
+    "publishedAt": "2026-08-01",
+    "aiGenerated": true,
+    "humanReviewed": false,
+    "breaking": true
+  },
+  {
+    "slug": "google-deepmind-gemini-update",
+    "title": "Google DeepMind erweitert Gemini um längere Kontextfenster",
+    "summary": "Ein Update der Gemini-Modellreihe verspricht deutlich längere Kontextverarbeitung für Dokumenten- und Codebase-Analyse.",
+    "categorySlug": "technisch",
+    "tags": [
+      "LLM",
+      "Google DeepMind",
+      "Gemini"
+    ],
+    "sourceName": "Google DeepMind Blog",
+    "sourceUrl": "https://deepmind.google/blog/",
+    "publishedAt": "2026-07-31",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "meta-llama-open-source-release",
+    "title": "Meta stellt neue Open-Source-Llama-Generation vor",
+    "summary": "Meta AI veröffentlicht eine neue Llama-Modellfamilie unter offener Lizenz und positioniert sie explizit gegen proprietäre Anbieter.",
+    "categorySlug": "technisch",
+    "tags": [
+      "LLM",
+      "Meta AI",
+      "Open Source"
+    ],
+    "sourceName": "Meta AI Blog",
+    "sourceUrl": "https://ai.meta.com/blog/",
+    "publishedAt": "2026-07-30",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "microsoft-copilot-agentic-features",
+    "title": "Microsoft integriert Agentic-Workflows tiefer in Copilot",
+    "summary": "Neue Copilot-Funktionen sollen mehrstufige Büroaufgaben across Office-Anwendungen automatisieren, mit granularen Freigabe-Einstellungen für Unternehmen.",
+    "categorySlug": "technisch",
+    "tags": [
+      "Agentic AI",
+      "Microsoft",
+      "Copilot"
+    ],
+    "sourceName": "Microsoft AI Blog",
+    "sourceUrl": "https://blogs.microsoft.com/ai/",
+    "publishedAt": "2026-07-29",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "china-ki-modelle-benchmark-aufholjagd",
+    "title": "Chinesische Open-Weight-Modelle holen bei Benchmarks weiter auf",
+    "summary": "Neue Modellversionen von DeepSeek, Alibabas Qwen und Zhipus GLM-Reihe erzielen auf mehreren Leaderboards Ergebnisse nahe an westlichen Spitzenmodellen – bei deutlich offeneren Lizenzen.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "China AI",
+      "DeepSeek",
+      "Open Source"
+    ],
+    "sourceName": "DeepSeek News",
+    "sourceUrl": "https://www.deepseek.com/",
+    "publishedAt": "2026-07-28",
+    "aiGenerated": true,
+    "humanReviewed": true
+  },
+  {
+    "slug": "mistral-enterprise-modell",
+    "title": "Mistral AI positioniert neues Modell gezielt für EU-Unternehmen",
+    "summary": "Das französische Lab wirbt mit EU-Datenresidenz und Compliance-Features und adressiert damit explizit Bedenken europäischer Unternehmenskunden.",
+    "categorySlug": "technisch",
+    "tags": [
+      "Mistral AI",
+      "Europa AI",
+      "Enterprise"
+    ],
+    "sourceName": "Mistral AI Blog",
+    "sourceUrl": "https://mistral.ai/news/",
+    "publishedAt": "2026-07-27",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "multimodale-modelle-video-verstehen",
+    "title": "Neue multimodale Modelle verbessern Langzeit-Video-Verständnis",
+    "summary": "Aktuelle Forschung zeigt Fortschritte beim Verständnis mehrstündiger Videoinhalte – relevant für Überwachung, Bildung und Content-Analyse.",
+    "categorySlug": "research",
+    "tags": [
+      "Multimodal",
+      "Video",
+      "Paper"
+    ],
+    "sourceName": "arXiv cs.CL",
+    "sourceUrl": "https://arxiv.org/list/cs.CL/recent",
+    "publishedAt": "2026-07-19",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "evaluation-frameworks-agentic-benchmarks",
+    "title": "Neue Evaluation-Frameworks für Agentic-Tool-Use veröffentlicht",
+    "summary": "Mehrere Open-Source-Benchmarks messen jetzt gezielt, wie zuverlässig Modelle mehrstufige Tool-Aufrufe planen und ausführen – bislang ein blinder Fleck klassischer Leaderboards.",
+    "categorySlug": "tools",
+    "tags": [
+      "Benchmarks",
+      "Agentic AI",
+      "Open Source"
+    ],
+    "sourceName": "Weights & Biases Blog",
+    "sourceUrl": "https://wandb.ai/site/",
+    "publishedAt": "2026-07-18",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "model-serving-kosten-vergleich",
+    "title": "Kostenvergleich: Self-Hosted Model Serving vs. Managed APIs",
+    "summary": "Eine aktualisierte Kalkulation zeigt, ab welchem Anfragevolumen selbst gehostetes Serving (vLLM, TensorRT) gegenüber Managed-API-Anbietern günstiger wird.",
+    "categorySlug": "tools",
+    "tags": [
+      "Deployment",
+      "Kosten",
+      "vLLM"
+    ],
+    "sourceName": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog",
+    "publishedAt": "2026-07-17",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "kostenloser-kurs-rag-grundlagen",
+    "title": "Neuer kostenloser Kurs: RAG-Systeme von Grund auf verstehen",
+    "summary": "Der Kurs behandelt Embedding-Modelle, Retriever-Architekturen und Evaluationsmethoden für Retrieval-Augmented-Generation-Systeme, inklusive Praxisprojekt.",
+    "categorySlug": "education",
+    "tags": [
+      "Kurs",
+      "RAG",
+      "Einsteiger"
+    ],
+    "sourceName": "DeepLearning.AI – The Batch",
+    "sourceUrl": "https://www.deeplearning.ai/the-batch/",
+    "publishedAt": "2026-07-16",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "reddit-community-diskussion-alignment",
+    "title": "Community-Diskussion: Wie realistisch sind aktuelle Alignment-Techniken?",
+    "summary": "Eine vielbeachtete Diskussion in der ML-Community fasst Argumente für und gegen die Wirksamkeit von RLHF & Constitutional-AI-Ansätzen zusammen.",
+    "categorySlug": "education",
+    "tags": [
+      "Community",
+      "AI Safety",
+      "Diskussion"
+    ],
+    "sourceName": "arXiv cs.CL",
+    "sourceUrl": "https://arxiv.org/list/cs.CL/recent",
+    "publishedAt": "2026-07-15",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-konferenz-berlin-ankuendigung",
+    "title": "KI-Konferenz Berlin kündigt Programm mit Fokus auf Agentic Systems an",
+    "summary": "Die diesjährige Ausgabe der Konferenz legt einen Schwerpunkt auf produktionsreife Agentic-Architekturen und lädt Speaker aus Forschung und Industrie ein.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Events",
+      "Deutschland",
+      "Agentic AI"
+    ],
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/",
+    "publishedAt": "2026-07-14",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "wochenrueckblick-ki-woche-29",
+    "title": "Wochenrückblick: Die wichtigsten KI-Meldungen der Woche",
+    "summary": "Von neuen Modell-Releases bis Regulierungs-Updates – die kompakte Zusammenfassung der Woche für alle, die nicht jeden Tag News verfolgen können.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Wochenrückblick",
+      "Übersicht"
+    ],
+    "sourceName": "TLDR AI",
+    "sourceUrl": "https://tldr.tech/ai",
+    "publishedAt": "2026-07-13",
+    "aiGenerated": true,
+    "humanReviewed": true
+  },
+  {
+    "slug": "nvidia-blackwell-ultra-rollout",
+    "title": "NVIDIA startet Auslieferung der Blackwell-Ultra-Generation an Hyperscaler",
+    "summary": "Die nächste Iteration der Blackwell-Architektur verspricht deutlich höhere Inferenz-Durchsatzraten pro Watt und soll die Nachfrage der großen Cloud-Anbieter für 2026/27 bedienen.",
+    "categorySlug": "hardware",
+    "tags": [
+      "NVIDIA",
+      "Blackwell",
+      "Data Center"
+    ],
+    "sourceName": "NVIDIA AI Blog",
+    "sourceUrl": "https://blogs.nvidia.com/",
+    "publishedAt": "2026-08-02",
+    "aiGenerated": true,
+    "humanReviewed": false,
+    "breaking": true
+  },
+  {
+    "slug": "amd-instinct-mi350-benchmark",
+    "title": "AMD Instinct MI350: Erste unabhängige Benchmarks gegen NVIDIAs Blackwell",
+    "summary": "Neue Vergleichstests zeigen AMDs MI350-Beschleuniger bei bestimmten Inferenz-Workloads konkurrenzfähig, bei Software-Reife (ROCm-Ökosystem) bleibt weiterhin ein Rückstand zu CUDA sichtbar.",
+    "categorySlug": "hardware",
+    "tags": [
+      "AMD",
+      "ROCm",
+      "Benchmark"
+    ],
+    "sourceName": "AMD ROCm Blog",
+    "sourceUrl": "https://rocm.docs.amd.com/",
+    "publishedAt": "2026-07-30",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "juelich-jupiter-exascale-vollbetrieb",
+    "title": "JUPITER in Jülich erreicht vollen Exascale-Betrieb",
+    "summary": "Europas erster Exascale-Supercomputer am Forschungszentrum Jülich ist vollständig in Betrieb und steht KI-Forschungsprojekten aus ganz Europa über die EuroHPC JU zur Verfügung.",
+    "categorySlug": "hardware",
+    "tags": [
+      "Supercomputing",
+      "EuroHPC",
+      "Deutschland"
+    ],
+    "sourceName": "Forschungszentrum Jülich",
+    "sourceUrl": "https://www.fz-juelich.de/de/ias/jsc/jupiter",
+    "publishedAt": "2026-07-29",
+    "aiGenerated": true,
+    "humanReviewed": true,
+    "editorsPick": true,
+    "editorsNote": "Zeigt konkret, was europäische Souveränität bei KI-Infrastruktur praktisch bedeutet – relevant für alle, die über Cloud-Abhängigkeiten von US-Anbietern nachdenken."
+  },
+  {
+    "slug": "asml-euv-lithografie-naechste-generation",
+    "title": "ASML kündigt nächste EUV-Lithografie-Generation für KI-Chip-Fertigung an",
+    "summary": "Die neue High-NA-EUV-Generation soll kleinere Strukturbreiten ermöglichen und ist damit ein Schlüsselfaktor für zukünftige NVIDIA-, AMD- und TSMC-Chipgenerationen.",
+    "categorySlug": "hardware",
+    "tags": [
+      "ASML",
+      "Lithografie",
+      "Supply Chain"
+    ],
+    "sourceName": "ASML",
+    "sourceUrl": "https://www.asml.com/",
+    "publishedAt": "2026-07-26",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "desktop-ai-rigs-kosten-nutzen-2026",
+    "title": "Desktop-AI-Rigs 2026: Wann lohnt sich eigene Hardware gegenüber Cloud-APIs?",
+    "summary": "Eine aktualisierte Kosten-Nutzen-Rechnung vergleicht Anschaffungskosten für lokale Dev-Rigs mit Unified-Memory-Architekturen gegen laufende Cloud-API-Kosten bei 70B- und 120B-Modellen.",
+    "categorySlug": "hardware",
+    "tags": [
+      "Dev-Rigs",
+      "TCO",
+      "Apple Silicon"
+    ],
+    "sourceName": "AIActEU Redaktion",
+    "sourceUrl": "https://developer.nvidia.com/embedded-computing",
+    "publishedAt": "2026-07-24",
+    "aiGenerated": false,
+    "humanReviewed": true
+  },
+  {
+    "slug": "adversarial-robustness-neue-angriffsklasse",
+    "title": "Forscher demonstrieren neue Angriffsklasse gegen Guardrail-Systeme",
+    "summary": "Die Studie zeigt, wie sich mehrstufige Prompt-Ketten nutzen lassen, um gängige Sicherheitsfilter zu umgehen, und schlägt erste Gegenmaßnahmen vor.",
+    "categorySlug": "research",
+    "tags": [
+      "AI Safety",
+      "Adversarial ML",
+      "Paper"
+    ],
+    "sourceName": "arXiv cs.AI",
+    "sourceUrl": "https://arxiv.org/list/cs.AI/recent",
+    "publishedAt": "2026-07-12",
+    "aiGenerated": true,
+    "humanReviewed": true
+  },
+  {
+    "slug": "eu-carbon-leakage-ki-rechenzentren-studie",
+    "title": "Umweltbundesamt warnt vor Carbon Leakage durch KI-Rechenzentrumswachstum",
+    "summary": "Eine neue UBA-Studie zeigt: Weil KI-Rechenkapazitäten stark auf die USA und China konzentriert sind, könnte ein EU-CO2-Preis Rechenlast eher verlagern als reduzieren.",
+    "categorySlug": "nachhaltigkeit",
+    "tags": [
+      "Carbon Leakage",
+      "Rechenzentren",
+      "Umweltbundesamt"
+    ],
+    "sourceName": "Umweltbundesamt",
+    "sourceUrl": "https://www.umweltbundesamt.de/",
+    "publishedAt": "2026-07-31",
+    "aiGenerated": true,
+    "humanReviewed": true,
+    "editorsPick": true,
+    "editorsNote": "Zeigt, dass der ökologische Fußabdruck von KI längst eine handfeste EU-Politikfrage ist – nicht nur ein technisches Detail."
+  },
+  {
+    "slug": "kuerzere-prompts-weniger-energieverbrauch",
+    "title": "Neue Untersuchung: Kürzere Prompts und Outputs senken den Energieverbrauch von KI spürbar",
+    "summary": "Forschende der UNU-INWEH zeigen, dass Modellwahl, Prompt-Länge und Modalität den ökologischen Fußabdruck von KI-Nutzung ebenso beeinflussen wie die Infrastruktur dahinter.",
+    "categorySlug": "nachhaltigkeit",
+    "tags": [
+      "Green AI",
+      "Energieverbrauch",
+      "UNU-INWEH"
+    ],
+    "sourceName": "UNU-INWEH",
+    "sourceUrl": "https://unu.edu/inweh/",
+    "publishedAt": "2026-07-28",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "telekom-gruene-ki-rechenzentrum-ausbau",
+    "title": "Deutsche Telekom baut Kühlungssteuerung ihrer Rechenzentren mit KI weiter aus",
+    "summary": "Nach den 2024 vorgestellten Grundsätzen für grüne KI setzt der Konzern nun stärker auf KI-gesteuerte Kühlung und bedarfsgerechtes Abschalten von Mobilfunk-Antennen.",
+    "categorySlug": "nachhaltigkeit",
+    "tags": [
+      "Deutsche Telekom",
+      "Green AI",
+      "Data Center"
+    ],
+    "sourceName": "Deutsche Telekom",
+    "sourceUrl": "https://www.telekom.com/",
+    "publishedAt": "2026-07-20",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-diagnostik-uniklinik-pilotprojekt",
+    "title": "Deutsche Uniklinik startet Pilotprojekt für KI-gestützte Röntgenbild-Diagnostik",
+    "summary": "Ein Radiologie-Team testet ein KI-Modell zur Voranalyse von Röntgenaufnahmen als Zweitmeinung – die finale Diagnose bleibt beim ärztlichen Personal.",
+    "categorySlug": "applications",
+    "tags": [
+      "Healthcare",
+      "Diagnostik",
+      "Enterprise-Integration"
+    ],
+    "sourceName": "Ärzteblatt",
+    "sourceUrl": "https://www.aerzteblatt.de/",
+    "publishedAt": "2026-07-27",
+    "aiGenerated": true,
+    "humanReviewed": true
+  },
+  {
+    "slug": "generative-ai-marketing-mittelstand-studie",
+    "title": "Wie deutsche Mittelständler generative KI im Marketing einsetzen",
+    "summary": "Eine Branchenumfrage zeigt: Bildgenerierung und Textentwürfe sind im Marketing-Alltag angekommen, echte Kampagnen-Automatisierung bleibt aber die Ausnahme.",
+    "categorySlug": "applications",
+    "tags": [
+      "Marketing",
+      "Mittelstand",
+      "Creative AI"
+    ],
+    "sourceName": "Bitkom",
+    "sourceUrl": "https://www.bitkom.org/",
+    "publishedAt": "2026-07-21",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "consumer-app-alltagsassistent-update",
+    "title": "Verbreiteter KI-Alltagsassistent bekommt Update für Termin- und Reiseplanung",
+    "summary": "Die neue Version verknüpft Kalender, E-Mails und Buchungsportale, um mehrstufige Planungsaufgaben eigenständig zu erledigen – vorerst nur auf Englisch.",
+    "categorySlug": "applications",
+    "tags": [
+      "Consumer AI",
+      "Assistenten",
+      "Alltag"
+    ],
+    "sourceName": "The Verge",
+    "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+    "publishedAt": "2026-07-15",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-konferenz-muenchen-programm-2026",
+    "title": "KI-Konferenz München kündigt Programm mit Fokus auf Open-Source-Ökosystem an",
+    "summary": "Neben internationalen Speakern legt die Konferenz diesmal einen Schwerpunkt auf deutsche und europäische Open-Source-Initiativen und Networking-Formate.",
+    "categorySlug": "community",
+    "tags": [
+      "Konferenz",
+      "Open Source",
+      "Deutschland"
+    ],
+    "sourceName": "KI-Konferenz München",
+    "sourceUrl": "https://www.digitalevents.de/",
+    "publishedAt": "2026-07-30",
+    "aiGenerated": false,
+    "humanReviewed": true
+  },
+  {
+    "slug": "dach-ai-hackathon-herbst-2026",
+    "title": "DACH-weiter KI-Hackathon ruft zu Projekten für den öffentlichen Sektor auf",
+    "summary": "Teams aus Deutschland, Österreich und der Schweiz entwickeln 48 Stunden lang Open-Source-Prototypen für Verwaltung, Bildung und Gesundheitswesen.",
+    "categorySlug": "community",
+    "tags": [
+      "Hackathon",
+      "Open Source",
+      "DACH"
+    ],
+    "sourceName": "Gründerszene",
+    "sourceUrl": "https://www.gruenderszene.de/",
+    "publishedAt": "2026-07-18",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "lokale-ki-meetups-netzwerk-wachstum",
+    "title": "Lokale KI-Meetup-Netzwerke wachsen: Über 40 aktive Gruppen im deutschsprachigen Raum",
+    "summary": "Von Berlin bis Zürich treffen sich Entwickler:innen und Forschende regelmäßig zu Vorträgen und Coding-Sessions – die Szene organisiert sich zunehmend über offene Plattformen.",
+    "categorySlug": "community",
+    "tags": [
+      "Meetups",
+      "Community",
+      "Networking"
+    ],
+    "sourceName": "Meetup",
+    "sourceUrl": "https://www.meetup.com/",
+    "publishedAt": "2026-07-10",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "red-teaming-bericht-frontier-modelle",
+    "title": "Neuer Red-Teaming-Bericht deckt Schwachstellen in mehreren Frontier-Modellen auf",
+    "summary": "Externe Sicherheitsforscher:innen dokumentieren systematisch, unter welchen Bedingungen sich Sicherheitsmaßnahmen aktueller Modelle umgehen lassen, und empfehlen strengere Evaluationsstandards.",
+    "categorySlug": "safety",
+    "tags": [
+      "Red Teaming",
+      "Model Evaluation",
+      "AI Safety"
+    ],
+    "sourceName": "METR",
+    "sourceUrl": "https://metr.org/",
+    "publishedAt": "2026-07-26",
+    "aiGenerated": true,
+    "humanReviewed": true
+  },
+  {
+    "slug": "bias-mitigation-neue-benchmark-suite",
+    "title": "Neue Benchmark-Suite soll Bias in mehrsprachigen KI-Modellen systematisch messbar machen",
+    "summary": "Das Testset deckt Geschlechter-, Herkunfts- und Altersbias über zehn Sprachen hinweg ab und soll Modellvergleiche für Unternehmen und Regulierer erleichtern.",
+    "categorySlug": "safety",
+    "tags": [
+      "Bias",
+      "Fairness",
+      "Benchmark"
+    ],
+    "sourceName": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog",
+    "publishedAt": "2026-07-17",
+    "aiGenerated": true,
+    "humanReviewed": false
+  },
+  {
+    "slug": "nist-ai-rmf-adoption-deutsche-unternehmen",
+    "title": "Immer mehr deutsche Unternehmen orientieren sich am NIST AI Risk Management Framework",
+    "summary": "Trotz fehlender rechtlicher Pflicht nutzen Compliance-Abteilungen das US-Framework zunehmend als praktische Vorlage für internes KI-Risikomanagement neben dem EU AI Act.",
+    "categorySlug": "safety",
+    "tags": [
+      "AI Risk Management",
+      "Governance",
+      "Compliance"
+    ],
+    "sourceName": "NIST",
+    "sourceUrl": "https://www.nist.gov/artificial-intelligence",
+    "publishedAt": "2026-07-08",
+    "aiGenerated": true,
+    "humanReviewed": false
+  }
+]

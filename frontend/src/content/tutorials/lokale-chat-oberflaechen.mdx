@@ -1,0 +1,64 @@
+export const metadata = {
+  title: "Open WebUI, LM Studio & Jan.ai: Lokale ChatGPT-Alternativen",
+  description:
+    "Drei Wege zu einer grafischen Oberfläche für lokale Modelle – von Docker bis zur reinen Desktop-App.",
+};
+
+Ein Terminal-Chat reicht für den Einstieg, aber für den Alltag lohnt sich eine grafische
+Oberfläche mit Verlauf, mehreren Konversationen und Datei-Upload. Drei bewährte Optionen,
+je nach Präferenz:
+
+## Open WebUI (Docker, volle Kontrolle)
+
+Läuft als eigener Container und verbindet sich mit einem lokal laufenden Ollama-Server:
+
+```bash
+docker run -d -p 3000:8080 \
+  --add-host=host.docker.internal:host-gateway \
+  -v open-webui:/app/backend/data \
+  --name open-webui \
+  ghcr.io/open-webui/open-webui:main
+```
+
+Danach ist die Oberfläche unter `http://localhost:3000` erreichbar. Vorteile: mehrbenutzerfähig,
+RAG-Funktion eingebaut, unterstützt mehrere Backends (Ollama, OpenAI-kompatible APIs)
+gleichzeitig – gut geeignet, wenn mehrere Personen im Team dieselbe Instanz nutzen sollen.
+
+## LM Studio (Desktop-App, GUI-first)
+
+LM Studio ist eine Electron-App für macOS, Windows und Linux ohne Docker-Voraussetzung:
+
+1. Installer von lmstudio.ai herunterladen
+2. Im integrierten Modell-Browser ein GGUF-Modell suchen und herunterladen
+3. Über den "Local Server"-Tab einen OpenAI-kompatiblen Endpunkt starten
+
+Praktisch für alle, die kein Terminal nutzen möchten und direkt Modelle aus Hugging Face
+durchsuchen wollen, ohne Kommandozeilen-Parameter zu lernen.
+
+## Jan.ai (Open Source, Privacy-first)
+
+Jan ist ebenfalls eine Desktop-App, aber vollständig Open Source (im Gegensatz zu LM Studio)
+und legt Wert auf Offline-Betrieb ohne jegliche Telemetrie:
+
+```bash
+# Linux (AppImage)
+chmod +x jan-linux-x86_64.AppImage
+./jan-linux-x86_64.AppImage
+```
+
+Jan bringt einen eigenen Model-Hub mit und unterstützt zusätzlich Erweiterungen
+(z. B. TensorRT-LLM-Backend für NVIDIA-GPUs).
+
+## Welche Option passen wählen?
+
+| Situation | Empfehlung |
+|---|---|
+| Team-Server, mehrere Nutzer:innen | Open WebUI |
+| Einzelplatz, möglichst wenig Konfiguration | LM Studio |
+| Open-Source-Anforderung, keine Telemetrie | Jan.ai |
+
+## Nächste Schritte
+
+- [Private RAG mit eigenen Dokumenten](/tutorials/private-rag-eigene-dokumente) – Open WebUI bringt
+  RAG bereits eingebaut mit
+- [Ollama Mastery](/tutorials/ollama-mastery) – falls das Backend noch fehlt

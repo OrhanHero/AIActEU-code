@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": "KI-News-Artikel, siehe ARCHITECTURE.md Content-Modell"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "summary": {
+      "type": "text",
+      "required": true,
+      "maxLength": 400
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "sourceUrl": {
+      "type": "string",
+      "required": true
+    },
+    "sourceName": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "articles"
+    },
+    "tags": {
+      "type": "json",
+      "default": []
+    },
+    "publishedDate": {
+      "type": "date",
+      "required": true
+    },
+    "aiGenerated": {
+      "type": "boolean",
+      "default": true,
+      "description": "EU-Kennzeichnung: Zusammenfassung wurde KI-generiert"
+    },
+    "humanReviewed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Redaktionell geprüft vor Veröffentlichung, siehe EDITORIAL_POLICY.md"
+    },
+    "breaking": {
+      "type": "boolean",
+      "default": false
+    },
+    "editorsPick": {
+      "type": "boolean",
+      "default": false
+    },
+    "editorsNote": {
+      "type": "text"
+    }
+  }
+}

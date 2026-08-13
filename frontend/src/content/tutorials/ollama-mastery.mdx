@@ -1,0 +1,87 @@
+export const metadata = {
+  title: "Ollama Mastery: Lokale LLMs in 15 Minuten",
+  description:
+    "Installation, Modelfiles und die REST-API von Ollama – der einfachste Einstieg in lokale Sprachmodelle.",
+};
+
+Ollama kapselt Modell-Download, Quantisierung und Inferenz-Server hinter einer einzigen
+Kommandozeile. Kein manuelles Kompilieren, keine CUDA-Treiber-Odyssee – ideal als erster
+Schritt in lokale LLMs.
+
+## Installation
+
+```bash
+# macOS / Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Windows: Installer von ollama.com herunterladen
+```
+
+Danach läuft im Hintergrund ein Server auf `localhost:11434`.
+
+## Erstes Modell laden und ausführen
+
+```bash
+ollama run llama3.1
+```
+
+Beim ersten Aufruf wird das Modell (mehrere GB) heruntergeladen und quantisiert im
+GGUF-Format lokal gespeichert. Danach startet direkt ein interaktiver Chat im Terminal.
+
+Weitere sinnvolle Startmodelle:
+
+- `ollama run qwen2.5` – starke Allround-Leistung bei moderater Größe
+- `ollama run llama3.1:8b-instruct-q4_0` – explizite Quantisierungsstufe für schwächere GPUs
+- `ollama run deepseek-r1` – Reasoning-fokussiertes Modell
+
+## Modelfiles: Eigene Modell-Varianten definieren
+
+Ein `Modelfile` funktioniert wie ein Dockerfile für LLMs – System-Prompt, Parameter und
+Basismodell in einer Datei:
+
+```text
+FROM llama3.1
+
+SYSTEM """
+Du bist ein präziser technischer Assistent. Antworte auf Deutsch, kurz und faktenbasiert.
+"""
+
+PARAMETER temperature 0.3
+PARAMETER num_ctx 8192
+```
+
+Build und Nutzung:
+
+```bash
+ollama create mein-assistent -f ./Modelfile
+ollama run mein-assistent
+```
+
+## REST-API nutzen
+
+Ollama exponiert automatisch eine lokale API – nützlich, um eigene Anwendungen anzubinden:
+
+```bash
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama3.1",
+  "prompt": "Erkläre RAG in zwei Sätzen.",
+  "stream": false
+}'
+```
+
+Die API ist außerdem größtenteils kompatibel zum OpenAI-Chat-Format
+(`/v1/chat/completions`), sodass viele bestehende Tools (LangChain, Continue.dev, Open WebUI)
+Ollama als Drop-in-Ersatz für Cloud-APIs nutzen können.
+
+## Modelle verwalten
+
+```bash
+ollama list              # installierte Modelle anzeigen
+ollama ps                 # aktuell geladene Modelle (RAM/VRAM-Nutzung)
+ollama rm llama3.1        # Modell löschen
+```
+
+## Nächste Schritte
+
+- [Open WebUI, LM Studio & Jan.ai](/tutorials/lokale-chat-oberflaechen) für eine grafische Oberfläche
+- [Private RAG mit eigenen Dokumenten](/tutorials/private-rag-eigene-dokumente) baut direkt auf Ollama auf

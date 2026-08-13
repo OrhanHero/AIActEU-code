@@ -1,0 +1,70 @@
+export const metadata = {
+  title: "Faster-Whisper: Offline-Transkription einrichten",
+  description: "Audio- und Video-Transkription komplett offline, deutlich schneller als Referenz-Whisper.",
+};
+
+Faster-Whisper ist eine Neuimplementierung von OpenAIs Whisper-Modell auf Basis von
+CTranslate2 – bei identischer Erkennungsgenauigkeit deutlich schneller und mit geringerem
+Speicherbedarf als das Original.
+
+## Installation
+
+```bash
+pip install faster-whisper
+```
+
+Für GPU-Beschleunigung (NVIDIA) zusätzlich eine passende cuDNN/CUDA-Installation
+voraussetzen; ohne GPU läuft Faster-Whisper auch auf der CPU nutzbar, nur langsamer.
+
+## Erste Transkription
+
+```python
+from faster_whisper import WhisperModel
+
+model = WhisperModel("large-v3", device="cuda", compute_type="float16")
+# Ohne GPU: device="cpu", compute_type="int8"
+
+segments, info = model.transcribe("interview.mp3", language="de")
+
+print(f"Erkannte Sprache: {info.language} ({info.language_probability:.2f})")
+for segment in segments:
+    print(f"[{segment.start:.1f}s -> {segment.end:.1f}s] {segment.text}")
+```
+
+## Modellgrößen im Vergleich
+
+| Modell | VRAM (float16) | Einsatzzweck |
+|---|---|---|
+| `tiny` / `base` | ~1 GB | schnelle Vorschau, geringe Genauigkeit |
+| `small` / `medium` | ~2–5 GB | guter Kompromiss für die meisten Anwendungsfälle |
+| `large-v3` | ~10 GB | höchste Genauigkeit, auch bei Dialekten/Fachvokabular |
+
+## Sprecher-Trennung (Diarization)
+
+Faster-Whisper selbst erkennt keine Sprecherwechsel. Für Interviews/Meetings lohnt sich die
+Kombination mit `pyannote.audio`:
+
+```bash
+pip install pyannote.audio
+```
+
+Der übliche Workflow: zunächst Faster-Whisper für die reine Transkription laufen lassen,
+anschließend die Zeitstempel mit den Sprecher-Segmenten aus `pyannote.audio` abgleichen.
+
+## Praxishinweis: Batch-Verarbeitung
+
+Für viele Dateien lohnt sich `batched_inference` (seit neueren Faster-Whisper-Versionen
+verfügbar), da die GPU dann nicht zwischen einzelnen Dateien leerläuft:
+
+```python
+from faster_whisper import BatchedInferencePipeline
+
+batched_model = BatchedInferencePipeline(model=model)
+segments, info = batched_model.transcribe("interview.mp3", batch_size=16)
+```
+
+## Nächste Schritte
+
+- [ComfyUI & Automatic1111](/tutorials/comfyui-automatic1111-einstieg) für die visuelle Seite
+  lokaler Multimodal-Workflows
+- Im [Verzeichnis](/verzeichnis#multimodal) weitere Audio-/Multimodal-Anbieter

@@ -1,0 +1,59 @@
+export const metadata = {
+  title: "ComfyUI & Automatic1111: Bildgenerierung lokal betreiben",
+  description: "Grundlagen für den lokalen Betrieb von Stable Diffusion und FLUX.1.",
+};
+
+Für lokale Bildgenerierung haben sich zwei Oberflächen etabliert, die beide auf denselben
+offenen Modellen (Stable Diffusion, FLUX.1) aufbauen, sich aber im Bedienkonzept stark
+unterscheiden.
+
+## Automatic1111: Klassische Web-UI
+
+Der etablierte Standard mit klassischer Formular-Oberfläche – guter Einstieg für alle, die
+schnell Ergebnisse ohne Node-Editor sehen wollen.
+
+```bash
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+cd stable-diffusion-webui
+./webui.sh   # macOS/Linux; unter Windows: webui-user.bat
+```
+
+Das Setup-Skript installiert Python-Abhängigkeiten automatisch und lädt beim ersten Start ein
+Basismodell nach. Checkpoints (`.safetensors`) landen in `models/Stable-diffusion/`.
+
+## ComfyUI: Node-basiert, mehr Kontrolle
+
+ComfyUI stellt jeden Schritt der Generierungs-Pipeline als verbindbaren Node dar – deutlich
+steilere Lernkurve, aber notwendig für komplexere Workflows (ControlNet, Inpainting-Ketten,
+Multi-Modell-Pipelines):
+
+```bash
+git clone https://github.com/comfyanonymous/ComfyUI.git
+cd ComfyUI
+pip install -r requirements.txt
+python main.py
+```
+
+Oberfläche danach unter `localhost:8188`. Fertige Workflows lassen sich als JSON importieren –
+die Community teilt viele vorgefertigte Node-Graphen für spezifische Anwendungsfälle.
+
+## FLUX.1 statt Stable Diffusion
+
+FLUX.1 (von Black Forest Labs, siehe [Verzeichnis](/verzeichnis#multimodal)) liefert bei
+Prompt-Treue und Textdarstellung in Bildern spürbar bessere Ergebnisse als ältere
+Stable-Diffusion-Versionen, benötigt aber mehr VRAM. Für Consumer-GPUs (12–16 GB VRAM) eignet
+sich die quantisierte `FLUX.1-schnell`-Variante als Einstieg.
+
+## Hardware-Anforderungen (Richtwerte)
+
+| VRAM | Realistischer Einsatz |
+|---|---|
+| 8 GB | SD 1.5 / SDXL mit Optimierungen (`--medvram`) |
+| 12–16 GB | SDXL flüssig, FLUX.1-schnell |
+| 24 GB+ | FLUX.1-dev, größere Batch-Größen, ControlNet-Ketten |
+
+## Nächste Schritte
+
+- [Faster-Whisper](/tutorials/faster-whisper-offline-transkription) für die Audio-Seite lokaler
+  Multimodal-Workflows
+- Im [Verzeichnis](/verzeichnis#hardware-silicon) passende GPU-/Hardware-Einordnung

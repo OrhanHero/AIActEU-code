@@ -1,0 +1,113 @@
+{
+  "_comment": "Kuratierte Forschungspublikationen/Reports (keine RSS-News, siehe /publikationen). Auswahl: Umwelt-/Ressourcenfußabdruck von KI sowie allgemeinere, oft zitierte AI-Landscape-/Safety-Reports. Alle URLs manuell verifiziert, Stand 08/2026.",
+  "topics": [
+    {
+      "slug": "umwelt-ressourcen",
+      "emoji": "🌍",
+      "title": "Umwelt & Ressourcenverbrauch",
+      "description": "Energie-, Wasser- und Landverbrauch von KI-Training und -Inferenz."
+    },
+    {
+      "slug": "deutschland",
+      "emoji": "🇩🇪",
+      "title": "Deutsche Forschung & Unternehmen",
+      "description": "Deutsche Institute, Behörden und Unternehmen zum ökologischen Fußabdruck von KI."
+    },
+    {
+      "slug": "landschaft-sicherheit",
+      "emoji": "🧭",
+      "title": "KI-Landschaft & Sicherheit",
+      "description": "Breitere Einordnung: Fähigkeiten, Verbreitung, Wirtschaft und Sicherheitsrisiken von KI."
+    }
+  ],
+  "publications": [
+    {
+      "title": "Environmental Cost of Artificial Intelligence: Carbon, Water, and Land Footprints",
+      "authors": "Aczel, M., Chamanara, S., Matin, M., Farsi, A., Marwala, T., Madani, K. — UNU-INWEH",
+      "url": "https://unu.edu/inweh/collection/environmental-cost-of-AIs-Enrgy-Use-Carbon-water-and-land-footprints",
+      "publishedDate": "2026-06-03",
+      "topic": "umwelt-ressourcen",
+      "summary": "Quantifiziert Kohlenstoff-, Wasser- und Landfußabdruck der Stromversorgung hinter KI-Systemen und zeigt: Der ökologische Fußabdruck hängt nicht nur von der Menge des verbrauchten Stroms ab, sondern entscheidend davon, wo und mit welchen Energiequellen er erzeugt wird. Alltägliche Nutzungsentscheidungen — Modellwahl, Länge der Ausgabe/Prompts, Modalität (Text, Bild, Video) — beeinflussen den Fußabdruck ebenso wie die Infrastruktur; kürzere Eingaben/Ausgaben können ihn spürbar reduzieren. Rahmt das Thema explizit auch als Governance- und Gerechtigkeitsfrage, da Umweltlasten und Nutzen ungleich verteilt sind."
+    },
+    {
+      "title": "Making AI Less \"Thirsty\": Uncovering and Addressing the Secret Water Footprint of AI Models",
+      "authors": "Li, P., Yang, J., Islam, M. A., Ren, S. — UC Riverside / UT Arlington",
+      "url": "https://arxiv.org/abs/2304.03271",
+      "publishedDate": "2023-04-06",
+      "topic": "umwelt-ressourcen",
+      "summary": "Erste systematische Untersuchung des Wasserfußabdrucks von KI-Modellen: Das Training von GPT-3 in modernen US-Rechenzentren verdunstet direkt schätzungsweise 700.000 Liter Trinkwasser; der globale Wasserbedarf durch KI könnte 2027 4,2–6,6 Mrd. m³ erreichen. Legt die methodische Grundlage für spätere Footprint-Studien wie den UNU-INWEH-Report oben."
+    },
+    {
+      "title": "Measuring the Carbon Intensity of AI in Cloud Instances",
+      "authors": "Dodge, J. et al. — Allen Institute for AI, Microsoft, Hugging Face u. a.",
+      "url": "https://dl.acm.org/doi/10.1145/3531146.3533234",
+      "publishedDate": "2022-06-21",
+      "topic": "umwelt-ressourcen",
+      "summary": "FAccT-2022-Paper mit einem Framework zur Messung der operativen CO₂-Intensität von KI-Cloud-Workloads anhand orts- und zeitspezifischer Emissionsdaten. Zeigt große regionale Unterschiede (bis zu Faktor ~3,7 zwischen emissionsärmster und -intensivster Region) — die Wahl der Rechenzentrumsregion ist damit ein wirksamer Hebel. Auch als Preprint verfügbar: arxiv.org/abs/2206.05229."
+    },
+    {
+      "title": "Energy and AI",
+      "authors": "International Energy Agency (IEA)",
+      "url": "https://www.iea.org/reports/energy-and-ai/",
+      "publishedDate": "2025-04-10",
+      "topic": "umwelt-ressourcen",
+      "summary": "Erste umfassende globale Analyse der IEA zum Verhältnis von Energie und KI: Der Stromverbrauch von Rechenzentren weltweit soll sich bis 2030 auf rund 945 TWh mehr als verdoppeln — mehr als der heutige Gesamtstromverbrauch Japans —, wobei KI-optimierte Rechenzentren der stärkste Treiber sind. Grundlage für den Follow-up-Report \"Key Questions on Energy and AI\" (04/2026)."
+    },
+    {
+      "title": "Carbon Leakage in AI-Driven Data Center Growth?",
+      "authors": "Schmid, N., Coroamă, V. C., Dumbravă, O., Eichler, M., Reisser, M., Kaack, L. H., Axenbeck, J., Füssler, J. — Umweltbundesamt (UBA) mit INFRAS & Roegen Centre for Sustainability",
+      "url": "https://www.umweltbundesamt.de/publikationen/carbon-leakage-in-ai-driven-data-center-growth",
+      "publishedDate": "2025-06",
+      "topic": "deutschland",
+      "summary": "Das deutsche Umweltbundesamt untersucht das Risiko von Carbon Leakage beim KI-getriebenen Rechenzentrumswachstum: Der KI-bezogene Energiebedarf von Rechenzentren könnte bis 2028 auf rund 300 TWh steigen (~1 % des weltweiten Stromverbrauchs). Da aktuelle und geplante KI-Rechenkapazitäten stark auf die USA und China konzentriert sind — Länder mit im Vergleich zur EU schwächerer Klimapolitik —, könnte ein CO₂-Preis in der EU Rechenlast eher ins Ausland verlagern als reduzieren. Aktuell schätzt die Studie das Risiko als moderat ein, da der Sektor primär auf Kapazitätsaufbau statt Kostenminimierung setzt."
+    },
+    {
+      "title": "Rechenzentren in Deutschland: Aktuelle Marktentwicklungen (Update 2025)",
+      "authors": "Hintemann, R., Hinterholzer, S. — Borderstep Institut für Innovation und Nachhaltigkeit (im Auftrag von Bitkom)",
+      "url": "https://www.borderstep.de/publikation/hintemann-r-hinterholzer-s-2025-rechenzentren-in-deutschland-aktuelle-marktentwicklungen-update-2025-berlin-bitkom/",
+      "publishedDate": "2025",
+      "topic": "deutschland",
+      "summary": "Jährliche Markterhebung des Borderstep Institut — Dr. Ralph Hintemann zählt zu den bekanntesten deutschen Forschern zum Energiebedarf von Rechenzentren: Deutschlands Rechenzentrumskapazität wuchs 2025 um 9 % auf 2.980 MW, der Stromverbrauch stieg auf 21,3 Mrd. kWh. KI-Rechenzentren sollen sich bis 2030 vervierfachen und dann rund 40 % der Gesamtkapazität ausmachen — der zentrale Treiber des für 2030 erwarteten Kapazitätswachstums von 70 %."
+    },
+    {
+      "title": "Nachhaltigkeit durch KI – Potenziale und Handlungsleitfaden für produzierende Unternehmen",
+      "authors": "Fraunhofer-Institut für Produktionstechnik und Automatisierung IPA, Fraunhofer-Institut für Arbeitswirtschaft und Organisation IAO",
+      "url": "https://www.ipa.fraunhofer.de/de/Publikationen/studien/nachhaltigkeit-durch-kI.html",
+      "publishedDate": "2022",
+      "topic": "deutschland",
+      "summary": "Praxisleitfaden zweier Fraunhofer-Institute für produzierende Unternehmen: zeigt an Beispielen wie recycelbaren Produkten, optimiertem Energieverbrauch und Kreislaufwirtschafts-Anwendungen, wie KI Effizienz und Umweltbilanz gleichzeitig verbessern kann. Liefert einen Sieben-Schritte-Prozess zur Einführung, der auch den Eigenenergiebedarf der KI selbst mitdenkt."
+    },
+    {
+      "title": "Für Umwelt und Menschen: Telekom setzt KI verantwortungsbewusst ein",
+      "authors": "Deutsche Telekom AG",
+      "url": "https://www.telekom.com/en/media/media-information/archive/for-the-environment-and-people-deutsche-telekom-uses-ai-responsibly-1077108",
+      "publishedDate": "2024-09-12",
+      "topic": "deutschland",
+      "summary": "Deutsche Telekom veröffentlicht neun \"Grundsätze für grüne KI\": u. a. Wiederverwendung bestehender Modelle statt Neu-Training und \"Green Coding\" zur Minimierung des Ressourcenverbrauchs. Parallel setzt der Konzern KI selbst zur Effizienzsteigerung ein — etwa zur intelligenten Kühlungssteuerung in Rechenzentren und zum bedarfsgerechten Abschalten von Mobilfunk-Antennen bei geringer Auslastung."
+    },
+    {
+      "title": "Klimafaktor KI: Mehrheit der Unternehmen erwartet CO₂-Einsparungen",
+      "authors": "Bitkom e. V. — Branchenverband der deutschen Digitalwirtschaft (Befragung von 600+ deutschen Unternehmen)",
+      "url": "https://www.bitkom.org/Presse/Presseinformation/Klimafaktor-Unternehmen-erwarten-CO2-Einsparungen",
+      "publishedDate": "2025-12-17",
+      "topic": "deutschland",
+      "summary": "Bitkom-Umfrage unter über 600 deutschen Unternehmen: 84 % sehen KI als Chance für Klimaschutz und Nachhaltigkeit, zwei Drittel erwarten CO₂-Einsparungen durch KI-Einsatz. Gleichzeitig halten 83 % den hohen Energieverbrauch beim Training von KI-Modellen für problematisch und fordern effiziente Algorithmen sowie optimierte Rechenzentren."
+    },
+    {
+      "title": "The 2026 AI Index Report",
+      "authors": "Stanford HAI (Institute for Human-Centered AI)",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "publishedDate": "2026-04-01",
+      "topic": "landschaft-sicherheit",
+      "summary": "Jährlicher, unabhängig geprüfter Referenzbericht zum Stand der KI: Forschung, technische Leistungsfähigkeit, Wirtschaft/Investitionen, Politik/Regulierung und öffentliche Wahrnehmung — über 400 Seiten mit Rohdaten und Visualisierungen als Grundlage für Politik, Forschung und Berichterstattung."
+    },
+    {
+      "title": "International AI Safety Report 2026",
+      "authors": "Bengio, Y. (Chair) et al. — 100+ Expert:innen aus 30+ Ländern, mandatiert vom AI Safety Summit Bletchley",
+      "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+      "publishedDate": "2026-02-03",
+      "topic": "landschaft-sicherheit",
+      "summary": "Größte internationale wissenschaftliche Bestandsaufnahme zu Fähigkeiten, aufkommenden Risiken und Sicherheitsmaßnahmen von General-Purpose-KI, mit EU-, OECD- und UN-Beteiligung im Expert Advisory Panel. Macht bewusst keine Politikempfehlungen, sondern liefert die wissenschaftliche Evidenzbasis für Entscheidungsträger:innen."
+    }
+  ]
+}

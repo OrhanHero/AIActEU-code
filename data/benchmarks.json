@@ -1,0 +1,29 @@
+{
+  "_comment": "Top-3-Benchmark-Plattformen lt. PROJEKTPLAN.md Abschnitt 7.3 'Benchmark & Evaluation Tools'. Auswahl nach Bekanntheit/Zitierhäufigkeit in der Community, Stand 08/2026. Reine Verzeichnis-Einträge, keine RSS-Quellen (Leaderboards ändern sich kontinuierlich, kein sinnvolles Feed-Format).",
+  "benchmarks": [
+    {
+      "name": "LMArena (Chatbot Arena)",
+      "url": "https://lmarena.ai",
+      "organization": "LMSYS / UC Berkeley SkyLab",
+      "description": "Community-basiertes Ranking: Nutzer:innen vergleichen anonymisierte Antworten zweier Modelle im Blind-Test; daraus wird eine Elo-Rangliste berechnet.",
+      "misst": "Menschlich wahrgenommene Antwortqualität im direkten Modellvergleich (Chat, Vision, WebDev u. a. Teil-Arenen).",
+      "updateFrequency": "Kontinuierlich (Live-Ranking)"
+    },
+    {
+      "name": "Hugging Face Open LLM Leaderboard",
+      "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+      "organization": "Hugging Face",
+      "description": "Standardisierte Benchmark-Suite für frei verfügbare (Open-Weight-)Modelle, automatisiert und reproduzierbar ausgeführt.",
+      "misst": "Reasoning, Wissen, Mathematik und weitere Standard-Benchmarks (u. a. MMLU-Pro, GPQA, MuSR, BBH).",
+      "updateFrequency": "Bei jeder Modell-Einreichung"
+    },
+    {
+      "name": "Stanford HELM",
+      "url": "https://crfm.stanford.edu/helm/",
+      "organization": "Stanford Center for Research on Foundation Models (CRFM)",
+      "description": "Holistische, mehrdimensionale Evaluation über viele Szenarien hinweg statt eines einzelnen Scores.",
+      "misst": "Genauigkeit, Robustheit, Fairness, Bias, Toxizität, Effizienz – über zahlreiche Aufgaben und Modelle hinweg.",
+      "updateFrequency": "Mehrmals jährlich (versionierte Releases)"
+    }
+  ]
+}

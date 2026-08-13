@@ -1,0 +1,13 @@
+{
+  "name": "aiacteu-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Standalone Ingestion- und Wartungs-Skripte, unabhängig von frontend/ und backend/ (siehe ARCHITECTURE.md).",
+  "scripts": {
+    "verify-sources": "node verify-sources.mjs",
+    "ingest": "node ingest.mjs"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}

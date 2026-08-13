@@ -1,0 +1,25 @@
+{
+  "name": "aiacteu",
+  "version": "1.0.0",
+  "description": "Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor mit EU-Verhaltenskodex-konformer Kennzeichnung von KI-generierten/-kuratierten Inhalten (EU AI Act Art. 50 & Art. 53).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrhanHero/AIActEU.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OrhanHero/AIActEU/issues"
+  },
+  "homepage": "https://github.com/OrhanHero/AIActEU#readme",
+  "devDependencies": {
+    "@types/node": "^26.2.0"
+  }
+}

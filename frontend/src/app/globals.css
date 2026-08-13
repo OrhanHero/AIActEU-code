@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #090d16;
+  --surface: #ffffff;
+  --surface-hover: #f1f5f9;
+  --border: #e2e8f0;
+  --border-glow: rgba(37, 99, 235, 0.25);
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --accent: #d97706;
+  --muted: #64748b;
+  --mesh-opacity: 0.5;
+}
+
+:root[data-theme="dark"] {
+  --background: #050814;
+  --foreground: #f1f5f9;
+  --surface: #0e1629;
+  --surface-hover: #17233d;
+  --border: #1e2c4a;
+  --border-glow: rgba(59, 130, 246, 0.4);
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --accent: #f59e0b;
+  --muted: #94a3b8;
+  --mesh-opacity: 0.25;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #050814;
+    --foreground: #f1f5f9;
+    --surface: #0e1629;
+    --surface-hover: #17233d;
+    --border: #1e2c4a;
+    --border-glow: rgba(59, 130, 246, 0.4);
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --accent: #f59e0b;
+    --muted: #94a3b8;
+    --mesh-opacity: 0.25;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 2.5s infinite linear;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.5deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  background-image: 
+    radial-gradient(at 10% 0%, rgba(37, 99, 235, var(--mesh-opacity)) 0px, transparent 45%),
+    radial-gradient(at 90% 10%, rgba(139, 92, 246, var(--mesh-opacity)) 0px, transparent 45%),
+    radial-gradient(at 50% 100%, rgba(245, 158, 11, var(--mesh-opacity)) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.font-serif-heading {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Glassmorphism & Card Utility Classes */
+.glass-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(37, 99, 235, 0.2);
+}
+
+.gradient-heading {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-border-glow {
+  position: relative;
+}
+
+.gradient-border-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(139, 92, 246, 0.2), rgba(245, 158, 11, 0.5));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* EU-Kennzeichnungs-Icons */
+.ai-label-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .ai-label-light {
+  display: none;
+}
+:root[data-theme="dark"] .ai-label-dark {
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .ai-label-light {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .ai-label-dark {
+    display: inline-block;
+  }
+}

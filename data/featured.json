@@ -1,0 +1,25 @@
+{
+  "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
+  "featured": [
+    {
+      "slug": "verschluesselter-ki-denkprozess-gehackt-schwache-modelle-verraten-geheimnisse",
+      "title": "Verschlüsselter KI-Denkprozess gehackt: Schwache Modelle verraten Geheimnisse",
+      "summary": "Ein Forschungsteam von MATS, Max-Planck-Institut, ELLIS-Institut Tübingen, Universität Tübingen und Snyk hat eine Architektur-Schwachstelle bei GPT-5, Claude und Gemini offengelegt: Die verschlüsselten Reasoning-Blöcke, mit denen Anbieter den Denkprozess ihrer Modelle vor Kunden verbergen, sind innerhalb einer Anbieter-Familie über Sessions, Nutzer und Modelle hinweg beliebig austauschbar. Wird der Block eines Flaggschiff-Modells an ein schwächeres, geringer abgesichertes Modell desselben Anbieters geschickt, entschlüsselt dieses den fremden Denkprozess und gibt ihn wörtlich im Klartext aus – das stärkere Modell muss dafür nie selbst angegriffen werden.",
+      "categorySlug": "safety",
+      "tags": [
+        "AI Safety",
+        "OpenAI",
+        "Anthropic",
+        "Google DeepMind"
+      ],
+      "sourceName": "Heise Online",
+      "sourceUrl": "https://www.heise.de/hintergrund/Verschluesselter-KI-Denkprozess-gehackt-Schwache-Modelle-verraten-Geheimnisse-11412087.html",
+      "studyUrl": "https://arxiv.org/abs/2608.09867",
+      "studyLabel": "Studie: Stealing Reasoning Traces from Proprietary LLM APIs (arXiv)",
+      "publishedAt": "2026-08-12",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Vier Angriffsvektoren folgen aus der Schwachstelle – Umgehung des Anti-Distillation-Schutzes, Extraktion privater Daten im grossen Stil, Offenlegung gefaehrlicher Inhalte trotz sauberer sichtbarer Antwort und unsichtbare Prompt-Injections in oeffentlichen Agenten-Rollouts. Aus 315.320 aus oeffentlichen Repositories eingesammelten Reasoning-Bloecken rekonstruierte das Team 367 personenbezogene Datensaetze und 182 Zugangsdaten. Die Veroeffentlichung erfolgte nach Responsible Disclosure zusammen mit konkreten kryptografischen und systemseitigen Gegenmassnahmen."
+    }
+  ]
+}
